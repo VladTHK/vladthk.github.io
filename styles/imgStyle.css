@@ -1,0 +1,48 @@
+.gifka {
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    border-radius: 15%;
+}
+
+.java-logo {
+    width: 20px;
+    height: 20px;
+    border-radius: 15%;
+}
+
+.cardicon {
+    margin: 7px 7px 7px 7px;
+    width: 25px;
+    height: 25px;
+}
+
+.linkicon {
+    width: 20px;
+    margin: 4px;
+    color: var(--text-color);
+}
+
+.tonkeepericon {
+    margin: 7px 7px 7px 7px;
+    width: 35px;
+    border-radius: 8px;
+}
+
+.cardtext {
+    padding: 0px 0px 0px 7px;
+    color: var(--aka-color);
+    cursor: grab;
+}
+
+.donateicon {
+    margin: 7px 7px 7px 7px;
+    width: 35px;
+    border-radius: 7px;
+}
+.sibcardicon {
+    margin: 7px 7px 7px 7px;
+    width: 25px;
+    height: 25px;
+    border-radius: 7px;
+}
