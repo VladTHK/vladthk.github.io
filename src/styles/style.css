@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 1.165;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Departure Mono, monospace;
+    justify-content: center;
+    display: flex;
+}
+
+footer {
+    color: var(--aka-color);
+    margin-top: 125%;
+}
+
+.container {
+  padding: 20px;
+  width: 345px;
+}
+
+a {
+    text-decoration: none;
+}
+
+h3, .donate {
+    text-align: center;
+}
+
+header{
+    text-decoration: none;
+    padding: 3px;
+}
+
+span {
+    display: flex;
+    justify-content: center;
+}
+
+.name{
+    font-size: 20px;
+}
+.kamodzi, h4{
+    color: var(--aka-color);
+    font-size: 10px;
+}
+
+.aka {
+    color: var(--aka-color);
+    font-size: 10px;
+}
+
+.nick {
+   line-height: 0.2; 
+}
+
+.bio {
+    font-size: 14px;
+}
+
+.back {
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    color: var(--aka-color);
+}
+.back:hover {
+    color: var(--accent-color);
+}
+.back:active {
+    color: var(--active-color);
+    
+}
+
+.link > span {
+    padding: 10px;
+    font-size: 70%;
+}
+
+
+
+
+@font-face {
+  font-family: 'Departure Mono';
+  src: url('resource/fonts/DepartureMono-Regular.woff2') format('woff2'),
+       url('resource/fonts/DepartureMono-Regular.woff') format('woff'),
+       url('resource/fonts/DepartureMono-Regular.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
