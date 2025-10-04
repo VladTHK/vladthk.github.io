@@ -86,9 +86,9 @@ span {
 
 @font-face {
   font-family: 'Departure Mono';
-  src: url('resource/fonts/DepartureMono-Regular.woff2') format('woff2'),
-       url('resource/fonts/DepartureMono-Regular.woff') format('woff'),
-       url('resource/fonts/DepartureMono-Regular.otf') format('otf');
+  src: url('/src/resource/fonts/DepartureMono-Regular.woff2') format('woff2'),
+       url('/src/resource/fonts/DepartureMono-Regular.woff') format('woff'),
+       url('/src/resource/fonts/DepartureMono-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
