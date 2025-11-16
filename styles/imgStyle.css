@@ -2,7 +2,8 @@
     height: 230px;
     display: flex;
     justify-content: center;
-    border-radius: 15%;
+    border-radius: 8px;
+    margin: 10px;
 }
 
 .java-logo {
@@ -31,7 +32,7 @@
 
 .cardtext {
     padding: 0px 0px 0px 7px;
-    color: var(--aka-color);
+    color: var(--accentless-color);
     cursor: grab;
 }
 

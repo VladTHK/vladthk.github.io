@@ -2,12 +2,12 @@
     margin-top: 2px;
     display: flex;
     flex-wrap: wrap;
+    box-shadow: inset 0, 0, 0, 10px var(--text-color);
     margin-left: -5px;
 }
 
 .buttons > a {
     color: var(--text-color);
-    background-color: var(--background-color);
     cursor: grab;
     padding: 8px 10px;
     font-size: 94%;
@@ -19,6 +19,9 @@
     flex: 1 0 calc(25% - 32px);
     text-align: center;
     transition: transform 0.2s ease;
+    box-shadow: inset 0 0 6px var(--text-color);
+    
+    
 }
 
 .buttons > a:focus {
@@ -26,28 +29,30 @@
 }
 
 .buttons > a:hover {
-  background: var(--hover-color);
   transform: scale(1.1);
+  border-color: var(--green-color);
+  box-shadow: inset 0 0 10px var(--green-color);
 }
 
 .buttons > a:active {
   color: var(--text-color);
-  background: var(--active-color);
+  border-color: none;
+  box-shadow: 0 0 20px var(--green-color);
+  background: var(--green-color);
   transform: scale(1.1);
 }
 
-.cards .native {
 
-    width: 100%;
-}
 
 .cards > div {
   border: 0.16em solid var(--border-color);
   border-radius: 8px;
   margin-top: 10px;
+  box-shadow: inset 0 0 10px var(--text-color);
+  transition: transform 0.2s ease;
 }
 
-.cards .header {
+.card-name {
   display: flex;
   align-items: center;
   font-size: 80%;
@@ -56,7 +61,7 @@
 }
 
 .cards .link {
-  color: var(--aka-color);
+  color: var(--accentless-color);
   margin-left: auto;
 }
 
@@ -73,61 +78,81 @@
 
 }
 
+.card-red:hover  {
+  transform: scale(1.1);
+  border-color: var(--red-color);
+  background-color: var(--red-color);
+  box-shadow: 0 0 20px var(--red-color);
+}
+
+.card-blue:hover  {
+  transform: scale(1.1);
+  border-color: var(--blue-color);
+  background-color: var(--blue-color);
+  box-shadow:  0 0 20px var(--blue-color);
+}
+
+.card-copy:active  {
+  transform: scale(1.2);
+  border-color: var(--green-color);
+  background-color: var(--green-color);
+  box-shadow:  0 0 20px var(--green-color);
+}
+
 .cards p {
   margin: 5px 3px 13px 2px;
   font-size: 70%;
 }
 
-#copyNotification {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #25fc65a4;
-  color: #291d26;
-  padding: 10px 20px;
+
+.about-me {
+  padding: 10px;
+  border: 0.16em solid var(--border-color);
+  box-shadow: inset 0 0 10px var(--text-color);
   border-radius: 8px;
-  font-weight: bold;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.5s ease;
-  z-index: 1000;
+  transition: transform 0.2s ease;
 }
 
-.crab-runner {
-  position: relative;
-  width: 100%;
-  height: 50px;
-  overflow: hidden;
-  margin-top: 0px;
+.about-me:hover {
+  padding: 10px;
+  transform: scale(1.1);
+  border: 0.16em solid var(--text-color);
+  box-shadow: inset 0 0 10px var(--text-color);
+  border-radius: 8px;
+}
+.about-donate {
+  margin: 50px 10px 10px 10px;
+  padding: 10px;
+  border: 0.16em solid var(--border-color);
+  box-shadow: inset 0 0 10px var(--text-color);
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+  backdrop-filter: blur(2px);
+}
+.go-back > a {
   display: flex;
-  align-items: center;
-  line-height: 0px;
+  justify-content: center;
+  color: var(--text-color);
+  margin: 40px 10px 10px 10px;
+  padding: 10px;
+  border: 0.16em solid var(--border-color);
+  box-shadow: inset 0 0 10px var(--text-color);
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+  backdrop-filter: blur(2px);
+}
+.go-back > a:hover {
+  padding: 10px;
+  transform: scale(1.1);
+  border: 0.16em solid var(--yellow-color);
+  box-shadow: inset 0 0 10px var(--yellow-color);
+  border-radius: 8px;
 }
 
-.crab {
-  position: absolute;
-  top: 0;
-  width: 70px;
-  height: 50px;
-  animation: runCrab 6s linear infinite;
+.about-donate:hover {
+  padding: 10px;
+  transform: scale(1.1);
+  border: 0.16em solid var(--text-color);
+  box-shadow: inset 0 0 10px var(--text-color);
+  border-radius: 8px;
 }
-
-.crab:nth-child(2) {
-  animation-delay: 2s;
-}
-
-.crab:nth-child(3) {
-  animation-delay: 4s;
-}
-
-@keyframes runCrab {
-  0% {
-    left: -50px;
-  }
-  100% {
-    left: 100%;
-  }
-}
-
-
