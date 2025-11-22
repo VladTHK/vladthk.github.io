@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/imgStyle.css">
     <link rel="stylesheet" href="styles/buttons.css">
     <link rel="stylesheet" href="styles/root.css">
+    <link rel="stylesheet" href="styles/adaptive.css">
 
     <script src="script/additionalButtons.js"></script>
 
@@ -16,12 +17,77 @@
 </head>
 
 <body>
-    <main>
+    <div class="block-left">
+        <div class="block-stack">
+            <h3>My Stack</h3>
+            <div class="stack-type">
+                <h3>• Frontend •</h3>
+                <div class="basic-lvl">
+                    
+                    <h3>Elementary</h3>   
+                    <div class="stack-block-system">
+                        <div class="block-system orange">
+                            <img src="/resource/html.png" alt="">HTML</div>
+                        <div class="block-system blue">
+                            <img src="/resource/css.png" alt="">CSS</div>
+                        <div class="block-system orange">
+                            <img src="/resource/javascript.png" alt="">JS</div>    
+                        <div class="block-system blue">
+                            <img src="/resource/react.png" alt="">React</div>
+                    </div>
+                </div>    
+            </div>    
+
+            
+            <div class="stack-type">
+                <h3>• Backend •</h3>
+                <div class="basic-lvl">
+                    <h3>Elementary</h3>   
+                    <div class="stack-block-system">
+                        <div class="block-system orange">
+                            <img src="/resource/java.png" alt="">Java</div>
+                        <div class="block-system red">
+                            <img src="/resource/rustacean.png" alt="">Rust</div>
+                        <div class="block-system green">
+                            <img src="/resource/python.png" alt="">Python</div>    
+                    </div>
+                </div>    
+            </div>    
+      
+            <div class="stack-type">
+                <h3>• Design •</h3>
+                <div class="basic-lvl">
+                    <h3>Upper-Intermediate</h3>   
+                    <div class="stack-block-system">
+                        <div class="block-system red">
+                            <img src="/resource/blender.png" alt="">Blender</div>
+                        <div class="block-system blue">
+                            <img src="/resource/photoshop.png" alt="">Photoshop</div>      
+                        <div class="block-system blue">
+                            <img src="/resource/blockbench.ico" alt="">Blockbench</div>    
+                        <div class="block-system white">
+                            <img src="/resource/aseprite.png" alt="">Aseprite</div>    
+                    </div> <br>
+                    <h3>Elementary</h3>   
+                    <div class="stack-block-system">
+                        <div class="block-system red">
+                            <img src="/resource/marvelouw.png" alt="">Marvelous Designer</div>   
+                        <div class="block-system green">
+                            <img src="/resource/substance.png" alt="">Substance Painter</div>    
+                    </div>
+                </div>    
+            </div>    
+        </div>
+    </div>
+
+
+
+    <div class="block-centre">
         <div class="block-about-me">
             <div class="about-me">
                 <span class="kamodzi">(❁´◡`❁)</span>
                 <div class="nick">
-                    <h3 class="name">VladTHK</h3><span class="accentless">aka: THK, Thinker, ThinkTHK, etc...</span>
+                    <h1 class="name">VladTHK</h1><span class="accentless">aka: THK, Thinker, ThinkTHK, etc...</span>
                 </div><br>
 
                 <div class="bio">
@@ -54,7 +120,7 @@
         </div>
         <div class="block-projects">
             <div class="cards">
-                <div class="card-red">
+                <div class="card-red rust-card">
                     <a href="rustvictory.html" target="_blank">
                     <div class="card-name" translate=""no">
                         <img src="resource/rustIcon.gif" alt="rusticon" class="cardicon">
@@ -63,10 +129,11 @@
                             <span>rustvictory.rust →</span>             
                         </div>
                     </div>
-                    <p class="cardtext">2010-2025 Rust has been the best lenguage for programming.</p>
-                    </a>
+                        <p class="cardtext">2010-2025 Rust has been the best lenguage for programming.</p>
+                        </a>
                 </div>
-                <div class="card-blue">
+
+                <div class="card-blue sibranium-card">
                     <a href="https://app.ston.fi/pools/EQArtoQf0bcsgce3--Kh21AYWx7zHnLkx4PGOZly5d_Jr9Eq" target="_blank">
                     <div class="card-name" translate=""no">
                         <img src="resource/sibraniumcoin.png" alt="sibraniumicon" class="sibcardicon">
@@ -75,19 +142,37 @@
                             <span>ston.fi →</span>                    
                         </div>
                     </div>
-                    <p class="cardtext">My ROFL meme coin project on Toncoin.</p>
-                    </a>
+                        <p class="cardtext">My ROFL meme coin project on Toncoin.</p>
+                        </a>
+                    </div>
+
+                <div class="card-purple thk-card">
+                    <a href="https://github.com/VladTHK/THK_font" target="_blank">
+                    <div class="card-name" translate=""no">
+                        <img src="resource/thk.png" alt="sibraniumicon" class="sibcardicon">
+                        <span>THK Font</span>
+                        <div class="link">
+                            <span>github.thk →</span>                    
+                        </div>
+                    </div>
+                        <p class="cardtext">My handwritten font reflecting my own handwriting.</p>
+                        </a>
                     </div>
                 </div>
+
             </div>
 
-        <footer>
-            <pre>
-                <img src="" alt="">
-            </pre>
-            <span class="accentless">&copysr; VladTHK</span>
-        </footer>
-    </main>
+            <footer>
+                <span class="accentless">&copysr; VladTHK</span>
+            </footer>
+        </div>
+    </div>
+
+    <div class="block-right">
+
+    </div>
+
+
 </body>
 
 </html>

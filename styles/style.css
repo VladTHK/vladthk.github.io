@@ -1,3 +1,17 @@
+/* ADDITIONAL */
+@font-face {
+    font-family: 'Departure Mono';
+    src: url('../resource/fonts/DepartureMono-Regular.woff2') format('woff2'),
+         url('../resource/fonts/DepartureMono-Regular.woff') format('woff'),
+         url('../resource/fonts/DepartureMono-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+/* ADDITIONAL */
+
+/* BASE */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,27 +20,134 @@
     scrollbar-width: none;
 }
 
-
-body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-family: 'Departure Mono', monospace;
-    justify-content: center;
-    display: flex;
-    background: url(/resource/background.png);
-    background-size: cover;
-}
-
 body::-webkit-scrollbar {
     display: none;
 }
 
-footer {
-    color: var(--accentless-color);
-    margin-top: 50%;
-    backdrop-filter: blur(3px);
-    box-shadow: 0 0 10px var(--background-color);
+body {
+    width: 100%;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Departure Mono', monospace;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    display: flex;
+    background: url(/resource/background.png);
+    background-size: cover;
+    gap: 30px;
+    margin: 30px;
 }
+
+a {
+    text-decoration: none;
+}
+
+.accentless {
+    color: var(--accentless-color);
+    font-size: 10px;
+}
+
+.left {
+    width: 40%;
+}
+
+.right {
+    width: 40%;
+}
+
+
+/* BASE */
+
+/* LEFT-BlOCK */
+.block-left {
+    width: 35%;
+}
+.block-stack {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    border: solid 2px var(--border-color);
+    border-radius: 16px;
+    box-shadow: inset 0 0 10px var(--accentless-color);
+    backdrop-filter: blur(3px);
+}
+.stack-type {
+    
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+    border: solid 2px var(--border-color);
+    border-radius: 16px;
+    box-shadow: inset 0 0 10px var(--text-color);
+    backdrop-filter: blur(3px);
+}
+
+.basic-lvl h3{
+    font-size: 70%;
+    color: var(--accentless-color);
+    text-align: center;
+}
+
+.stack-block-system {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: 100%;
+    gap: 10px;
+}
+
+.block-system {
+    align-items: center;
+    font-size: 80%;
+    align-content: center;
+    justify-items: center;
+    padding: 10px;
+    border: solid 2px var(--border-color);
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px var(--text-color);
+    backdrop-filter: blur(3px);
+    transition: transform 0.2s ease;
+}
+
+.block-system img{
+    border-radius: 10px;
+    margin-right: 5px;
+    width: 15px;
+}
+.orange:hover {
+    border-color: var(--orange-color);
+    box-shadow: inset 0 0 15px var(--orange-color);
+    transform: scale(1.2);
+}
+.blue:hover {
+    border-color: var(--blue-color);
+    box-shadow: inset 0 0 15px var(--blue-color);
+    transform: scale(1.2);
+}
+
+.red:hover {
+    border-color: var(--red-color);
+    box-shadow: inset 0 0 15px var(--red-color);
+    transform: scale(1.2);
+}
+
+.green:hover {
+    border-color: var(--green-color);
+    box-shadow: inset 0 0 15px var(--green-color);
+    transform: scale(1.2);
+}
+
+.white:hover {
+    border-color: var(--text-color);
+    box-shadow: inset 0 0 10px var(--text-color);
+    transform: scale(1.2);
+}
+/* LEFT-BlOCK */
+
+/* CENTER-BLOCK */
 
 .block-about-me {
     padding: 20px;
@@ -34,17 +155,61 @@ footer {
     border: solid 2px var(--border-color);
     border-radius: 16px;
     box-shadow: inset 0 0 10px var(--accentless-color);
-    margin-top: 10px;
     backdrop-filter: blur(3px);
 }
 
+.about-me {
+    padding: 10px;
+    border: 0.16em solid var(--border-color);
+    box-shadow: inset 0 0 10px var(--text-color);
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+  
+.about-me:hover {
+    padding: 10px;
+    transform: scale(1.1);
+    background: url(/resource/vladthk.gif) no-repeat;
+    background-position: center -60px;
+    border: 0.16em solid var(--text-color);
+    box-shadow: inset 0 0 10px var(--text-color);
+    border-radius: 8px;
+}
+
+.block-about-me span {
+    display: flex;
+    justify-content: center;
+}
+
+.name {
+    font-size: 20px;
+}
+
+.nick h1 {
+    text-align: center;
+}
+
+.kamodzi, h4{
+    color: var(--accentless-color);
+    font-size: 10px;
+}
+
+.nick {
+    line-height: 0.2; 
+ }
+ 
+ .bio {
+     font-size: 14px;
+ }
+
+
 .block-projects {
+    margin-top: 20px;
     padding: 20px;
     width: 345px;
     border: solid 2px var(--border-color);
     border-radius: 16px;
     box-shadow: inset 0 0 10px var(--accentless-color);
-    margin-top: 20px;
     backdrop-filter: blur(3px);
     transition: transform 0.2s ease;
 }
@@ -58,73 +223,76 @@ footer {
     backdrop-filter: blur(3px);
 }
 
-a {
-    text-decoration: none;
-}
+/* CENTER-BLOCK */
 
-h3, .donate {
-    text-align: center;
+/* RIGHT-BLOCK */
+.block-right {
+    width: 35%;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }
+/* RIGHT-BLOCK */
 
-
-span {
-    display: flex;
-    justify-content: center;
-}
-
-.name{
-    font-size: 20px;
-}
-.kamodzi, h4{
-    color: var(--accentless-color);
-    font-size: 10px;
-}
-
-.accentless {
-    color: var(--accentless-color);
-    font-size: 10px;
-}
-
-.nick {
-   line-height: 0.2; 
-}
-
-.bio {
-    font-size: 14px;
-}
-
-.back {
-    display: flex;
-    justify-content: center;
-    font-size: 16px;
-    color: var(--accentless-color);
-}
-.back:hover {
-    color: var(--green-color);
-}
-.back:active {
-    color: var(--green-color);
-    
-}
 
 .link > span {
     padding: 10px;
     font-size: 70%;
 }
 
-.error {
-    display: flex;
-    text-align: center;
-    flex-wrap: wrap;
-    justify-content: center;
+/* ANOTHER */
+.about-donate {
+    padding: 10px;
+    border: 0.16em solid var(--border-color);
+    box-shadow: inset 0 0 10px var(--text-color);
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+    backdrop-filter: blur(2px);
 }
 
-@font-face {
-    font-family: 'Departure Mono';
-    src: url('../resource/fonts/DepartureMono-Regular.woff2') format('woff2'),
-         url('../resource/fonts/DepartureMono-Regular.woff') format('woff'),
-         url('../resource/fonts/DepartureMono-Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+.about-donate span {
+    display: flex;
+    justify-content: center;
 }
+.go-back > a {
+    display: flex;
+    justify-content: center;
+    color: var(--text-color);
+    margin: 40px 10px 10px 10px;
+    padding: 10px;
+    border: 0.16em solid var(--border-color);
+    box-shadow: inset 0 0 10px var(--text-color);
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+    backdrop-filter: blur(2px);
+}
+.go-back > a:hover {
+    padding: 10px;
+    transform: scale(1.1);
+    border: 0.16em solid var(--yellow-color);
+    box-shadow: inset 0 0 10px var(--yellow-color);
+    border-radius: 8px;
+}
+  
+.about-donate:hover {
+    padding: 10px;
+    transform: scale(1.1);
+    border: 0.16em solid var(--text-color);
+    box-shadow: inset 0 0 10px var(--text-color);
+    border-radius: 8px;
+}
+/* ANOTHER */
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    bottom: 0;
+    justify-content: center;
+    align-content: center;
+    color: var(--accentless-color);
+    margin-top: 50%;
+    backdrop-filter: blur(3px);
+}
+
+/* FOOTER */
