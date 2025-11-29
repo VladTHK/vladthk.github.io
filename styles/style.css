@@ -312,13 +312,13 @@ a {
     text-align: center;
 }
 
-.stack-block-system {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 10px;
+.info {
+    justify-content: start;
+}
+
+.about-me-block-system {
+
     width: 100%;
-    gap: 20px;
 }
 
 .block-system:hover {
