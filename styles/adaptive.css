@@ -2,15 +2,11 @@
     
     body {
         width: 100%;
-        background-color: var(--background-color);
-        color: var(--text-color);
-        font-family: 'Departure Mono', monospace;
         flex-direction: none;
         justify-content: center;
         position: relative;
-        display: flex;
-        background: url(/resource/background.png);
         background-size: cover;
+        display: flex;
         gap: 30px;
         margin: 15px;
     }

@@ -10,7 +10,7 @@
     color: var(--text-color);
     cursor: grab;
     padding: 8px 10px;
-    font-size: 94%;
+    font-size: 14px;
     border: 2px solid ;
     border-color: var(--border-color);
     border-radius: 6px;
@@ -19,9 +19,7 @@
     flex: 1 0 calc(25% - 32px);
     text-align: center;
     transition: transform 0.2s ease;
-    box-shadow: inset 0 0 6px var(--text-color);
-    
-    
+    box-shadow: inset 0 0 10px var(--border-color), 0 0 5px var(--accentless-color);  
 }
 
 .buttons > a:focus {
@@ -31,7 +29,7 @@
 .buttons > a:hover {
   transform: scale(1.1);
   border-color: var(--green-color);
-  box-shadow: inset 0 0 10px var(--green-color);
+  box-shadow: inset 0 0 5px var(--green-color), 0 0 10px var(--green-color), inset 10px 5px 20px var(--green-color), inset -10px 0px 20px var(--green-color);
 }
 
 .buttons > a:active {
@@ -48,21 +46,24 @@
   border: 0.16em solid var(--border-color);
   border-radius: 8px;
   margin-bottom: 10px;
-  box-shadow: inset 0 0 10px var(--text-color);
+  box-shadow: inset 0 0 20px var(--text-color), 0 0 5px var(--accentless-color);
   transition: transform 0.2s ease;
 }
+
 
 .card-name {
   display: flex;
   align-items: center;
-  font-size: 80%;
+  font-size: 90%;
   color: var(--text-color);
   cursor: grab;
 }
 
 .cards .link {
+  font-style: italic;
   color: var(--accentless-color);
   margin-left: auto;
+  
 }
 
 .cards #symbol-icon {
@@ -75,6 +76,7 @@
   margin-left: 10px;
   margin-right: 8px;
   margin-bottom: -3px;
+  
 
 }
 
@@ -82,37 +84,43 @@
   background: url(/resource/snow.gif) no-repeat;
   background-position: center center;
   box-shadow: 0 0 0px var(--red-color);
+  background-blend-mode: darken;
 }
 
 .rust-card:hover {
   background: url(/resource/crab.gif) no-repeat;
+
   background-position: right center;
+  background-blend-mode:color-dodge;
+
 }
 
 .thk-card:hover {
-  background: url(/resource/text.gif) no-repeat;
+  background: url(/resource/thk.gif) no-repeat;
+  background-blend-mode: darken;
   background-position: center center;
+  color: var(--text-color);
 }
 
 .card-red:hover  {
   transform: scale(1.1);
-  border-color: var(--red-color);
   background-color: var(--red-color);
-  box-shadow: 0 0 20px var(--red-color);
+  border-color: var(--red-color);
+  box-shadow:  0 0 50px var(--red-color);
 }
 
 .card-blue:hover  {
   transform: scale(1.1);
   border-color: var(--blue-color);
   background-color: var(--blue-color);
-  box-shadow:  0 0 20px var(--blue-color);
+  box-shadow:  0 0 50px var(--blue-color);
 }
 
 .card-purple:hover  {
   transform: scale(1.1);
   border-color: var(--purple-color);
   background-color: var(--purple-color);
-  box-shadow:  0 0 20px var(--purple-color);
+  box-shadow:  0 0 50px var(--purple-color);
 }
 
 .card-copy:active  {
@@ -120,6 +128,7 @@
   border-color: var(--green-color);
   background-color: var(--green-color);
   box-shadow:  0 0 20px var(--green-color);
+  
 }
 
 .cards p {

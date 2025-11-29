@@ -8,6 +8,9 @@
     font-style: normal;
     font-display: swap;
 }
+
+
+
 /* ADDITIONAL */
 
 /* BASE */
@@ -22,10 +25,13 @@
 
 body::-webkit-scrollbar {
     display: none;
+    width: 0 !important;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
 }
 
 body {
-    width: 100%;
+    width: 97%;
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: 'Departure Mono', monospace;
@@ -33,8 +39,9 @@ body {
     justify-content: space-between;
     position: absolute;
     display: flex;
-    background: url(/resource/background.png);
-    background-size: cover;
+    background: url(/resource/background.jpg) no-repeat;
+    background-position: center -80px ;
+    background-size: cover 100%;
     gap: 30px;
     margin: 30px;
 }
@@ -67,21 +74,23 @@ a {
     width: 100%;
     justify-content: center;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     border: solid 2px var(--border-color);
     border-radius: 16px;
-    box-shadow: inset 0 0 10px var(--accentless-color);
+    box-shadow: inset 0 0 10px var(--accentless-color), 0 0 10px var(--black-color), inset -2px -2px 10px var(--text-color);
     backdrop-filter: blur(3px);
+
 }
+
 .stack-type {
-    
     text-align: center;
     margin: 10px;
-    padding: 20px;
+    padding:10px;
     border: solid 2px var(--border-color);
     border-radius: 16px;
-    box-shadow: inset 0 0 10px var(--text-color);
+    box-shadow: inset 0 0 10px var(--text-color), 0 0 10px var(--black-color);
     backdrop-filter: blur(3px);
+    user-select: none;
 }
 
 .basic-lvl h3{
@@ -96,55 +105,90 @@ a {
     flex-wrap: wrap;
     padding: 10px;
     width: 100%;
-    gap: 10px;
+    gap: 20px;
 }
 
 .block-system {
+    color: var(--white-color);
+    display: flex;
+    font-weight: 500;
+    justify-content: center;
+    flex: 1 0 calc(25% - 32px);
     align-items: center;
-    font-size: 80%;
-    align-content: center;
+    font-size: 14px;
     justify-items: center;
     padding: 10px;
-    border: solid 2px var(--border-color);
     border-radius: 10px;
-    box-shadow: inset 0 0 10px var(--text-color);
-    backdrop-filter: blur(3px);
+    border: 2px solid var(--border-color);
+    box-shadow: inset 0 0 15px var(--text-color), 0 0 10px var(--border-color);
     transition: transform 0.2s ease;
 }
 
 .block-system img{
-    border-radius: 10px;
+    border-radius: 5px;
     margin-right: 5px;
-    width: 15px;
+    width: 20px;
 }
 .orange:hover {
+    color: var(--orange-color);
     border-color: var(--orange-color);
-    box-shadow: inset 0 0 15px var(--orange-color);
+    font-weight: 700;
+    box-shadow: inset 0 0 20px var(--orange-color), 0 0 20px var(--orange-color), inset 10px 5px 20px var(--orange-color), inset -10px -5px 30px var(--red-color), 10px 5px 20px var(--orange-color), -10px -5px 30px var(--red-color);
     transform: scale(1.2);
 }
 .blue:hover {
     border-color: var(--blue-color);
-    box-shadow: inset 0 0 15px var(--blue-color);
+    color: var(--blue-color);
+    font-weight: 700;
+    box-shadow: inset 0 0 20px var(--blue-color), 0 0 30px var(--blue-color), inset 10px 5px 20px var(--blue-color), inset -10px 0px 20px var(--blue-color);
     transform: scale(1.2);
 }
 
 .red:hover {
+    color: var(--red-color);
+    font-weight: 700;
     border-color: var(--red-color);
-    box-shadow: inset 0 0 15px var(--red-color);
+    box-shadow: inset 0 0 20px var(--red-color), 0 0 30px var(--red-color), inset 10px 5px 20px var(--red-color), inset -10px -5px 30px var(--orange-color), 10px 5px 20px var(--red-color), -10px -5px 30px var(--orange-color);
     transform: scale(1.2);
 }
 
 .green:hover {
+    color: var(--green-color);  
+    font-weight: 700;  
     border-color: var(--green-color);
-    box-shadow: inset 0 0 15px var(--green-color);
+    box-shadow: inset 0 0 20px var(--green-color), 0 0 30px var(--green-color), inset 10px 5px 20px var(--green-color), inset -10px 0px 20px var(--green-color);
     transform: scale(1.2);
 }
 
 .white:hover {
     border-color: var(--text-color);
-    box-shadow: inset 0 0 10px var(--text-color);
+    font-weight: 700;
+    box-shadow: inset 0 0 20px var(--text-color), 0 0 30px var(--text-color), inset 10px 5px 20px var(--border-color), inset -10px 0px 20px var(--border-color);
     transform: scale(1.2);
+    background-color: #00ccff8e;
 }
+
+.block-gif {
+    margin-top: 30px;
+    border: solid 2px var(--border-color);
+    border-radius: 16px;
+    box-shadow: inset 0 0 10px var(--accentless-color), 0 0 10px var(--black-color), inset -5px 5px 10px var(--text-color), inset 0px -5px 10px var(--text-color);
+    backdrop-filter: blur(3px);
+}
+
+.ggif {
+    padding: 20px;
+}
+
+.ggif img{
+    user-select:none;
+    width: 100%; 
+    filter: drop-shadow(0 0 10px var(--text-color));
+    border-radius: 20px;
+    box-shadow: inset 5px 5px 20px var(--blue-color);
+    
+}
+
 /* LEFT-BlOCK */
 
 /* CENTER-BLOCK */
@@ -154,8 +198,8 @@ a {
     width: 345px;
     border: solid 2px var(--border-color);
     border-radius: 16px;
-    box-shadow: inset 0 0 10px var(--accentless-color);
-    backdrop-filter: blur(3px);
+    box-shadow: inset 0 0 10px var(--accentless-color), 0 0 10px var(--black-color), inset 0 -2px 10px var(--text-color);
+    backdrop-filter: blur(4px);
 }
 
 .about-me {
@@ -171,8 +215,8 @@ a {
     transform: scale(1.1);
     background: url(/resource/vladthk.gif) no-repeat;
     background-position: center -60px;
-    border: 0.16em solid var(--text-color);
-    box-shadow: inset 0 0 10px var(--text-color);
+    border: 2px solid var(--border-color);
+    box-shadow: inset 0 0 20px var(--text-color);
     border-radius: 8px;
 }
 
@@ -209,8 +253,8 @@ a {
     width: 345px;
     border: solid 2px var(--border-color);
     border-radius: 16px;
-    box-shadow: inset 0 0 10px var(--accentless-color);
-    backdrop-filter: blur(3px);
+    box-shadow: inset 0 0 10px var(--accentless-color), 0 0 10px var(--black-color), inset 0 0 20px var(--text-color);
+    backdrop-filter: blur(5px);
     transition: transform 0.2s ease;
 }
 
@@ -219,7 +263,7 @@ a {
     width: 345px;
     border: solid 2px var(--border-color);
     border-radius: 16px;
-    box-shadow: inset 0 0 10px var(--accentless-color);
+    box-shadow: inset 0 0 10px var(--accentless-color), 0 0 10px var(--black-color), inset 0 0 20px var(--text-color);
     backdrop-filter: blur(3px);
 }
 
@@ -234,10 +278,61 @@ a {
 }
 /* RIGHT-BLOCK */
 
-
 .link > span {
     padding: 10px;
     font-size: 70%;
+}
+
+.block-info {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    border: solid 2px var(--border-color);
+    border-radius: 16px;
+    box-shadow: inset 0 0 10px var(--accentless-color), 0 0 10px var(--black-color), inset 2px -2px 10px var(--text-color);
+    backdrop-filter: blur(3px);
+
+}
+
+.stack-type {
+    text-align: center;
+    margin: 10px;
+    padding:10px;
+    border: solid 2px var(--border-color);
+    border-radius: 16px;
+    box-shadow: inset 0 0 10px var(--text-color), 0 0 10px var(--black-color);
+    backdrop-filter: blur(3px);
+    user-select: none;
+}
+
+.basic-lvl h3{
+    font-size: 70%;
+    color: var(--accentless-color);
+    text-align: center;
+}
+
+.stack-block-system {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: 100%;
+    gap: 20px;
+}
+
+.block-system:hover {
+    transform: scale(1.2);
+}
+
+.block-system img{
+    border-radius: 5px;
+    margin-right: 5px;
+    width: 20px;
+}
+
+.eng {
+    background: url();
 }
 
 /* ANOTHER */
@@ -290,8 +385,7 @@ footer {
     bottom: 0;
     justify-content: center;
     align-content: center;
-    color: var(--accentless-color);
-    margin-top: 50%;
+    margin-top: 70%;
     backdrop-filter: blur(3px);
 }
 

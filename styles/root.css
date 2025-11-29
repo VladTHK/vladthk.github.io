@@ -1,14 +1,17 @@
 :root {
-  --text-color: #feffe7;
+  --text-color: #f5f5f5;
   --background-color: #291d26;
   --border-color: #ffffff9f;
   --focus-color: #f1e3b47e;
   --hover-color: #7ad194a4;
-  --accentless-color: #a3b1a3af;
+  --accentless-color: #dadada8f;
   --green-color: #25fc65a4;
   --orange-color: #eb9b24dc;
   --yellow-color: #fbff00dc;
   --blue-color: #246aebdc;
   --purple-color: #9124ebdc;
   --red-color: #eb2424dc;
+  --black-color: #141414;
+  --gray-color: #373737;
+  --lightgray-color: #525252;
 }
