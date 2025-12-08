@@ -311,6 +311,35 @@ a {
 .eng {
     background: url();
 }
+
+.doelsquad {
+    color: var(--white-color);
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    width: 100%;
+    font-size: 18px;
+    justify-items: center;
+    border-radius: 15px;
+    border: 2px solid var(--gray-color);
+    box-shadow: inset 0 0 10px var(--gray-color), 0 0 10px var(--black-color);
+    transition: transform 0.2s ease;
+}
+.stack-block-system a{color: var(--white-color);}
+.doelsquad img {
+    border-radius: 10px;
+    width: 70px;
+}
+
+.doelsquad:hover {
+    transform: scale(1.05);
+}
+
+
+.scale {transition: transform 0.2s ease;}
+.scale:hover {transform: scale(1.05);}
+
+
 /* RIGHT-BLOCK */
 /* ANOTHER */
 .about-donate {
@@ -353,16 +382,16 @@ a {
     box-shadow: inset 0 0 10px var(--text-color);
     border-radius: 8px;
 }
+
 /* ANOTHER */
 
 /* FOOTER */
 
 footer {
-    top: 200%;
+
+
     display: flex;
-    position: absolute;
     justify-content: center;
-    align-content: center;
     backdrop-filter: blur(3px);
 }
 

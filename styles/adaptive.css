@@ -27,7 +27,7 @@
     }
 
     footer {
-        margin-top: 100%;
+        order: 2;
         bottom: 0;
     }
 }
