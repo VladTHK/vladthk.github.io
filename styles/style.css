@@ -23,7 +23,6 @@ body::-webkit-scrollbar {
 
 body {
     width: 97%;
-    background-color: var(--background-color);
     color: var(--text-color);
     font-family: "JetBrains Mono", monospace;
     flex-direction: row;
