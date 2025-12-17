@@ -85,13 +85,16 @@
 .sibranium-card:hover {
   background: url(/resource/snow.gif) no-repeat;
   background-position: center center;
-  box-shadow: 0 0 0px var(--red-color);
+  background-blend-mode: darken;
+}
+.tasktracker-card:hover {
+  background: url(/resource/windows.gif) no-repeat;
+  background-position: center center;
   background-blend-mode: darken;
 }
 
 .rust-card:hover {
   background: url(/resource/crab.gif) no-repeat;
-
   background-position: right center;
   background-blend-mode:color-dodge;
 
