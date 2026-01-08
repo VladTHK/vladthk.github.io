@@ -7,12 +7,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=JetBrains+Mono:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/github.css">
     <link rel="stylesheet" href="styles/imgStyle.css">
     <link rel="stylesheet" href="styles/buttons.css">
     <link rel="stylesheet" href="styles/root.css">
     <link rel="stylesheet" href="styles/adaptive.css">
 
+    <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css">
 
 
     <link rel="icon" href="resource/icon.gif" type="image/x-icon">
@@ -46,10 +49,10 @@
                 <h3>Backend</h3>
                 <div class="basic-lvl">
                     <h3>Elementary</h3>   
-                    <div class="stack-block-system">
-                        <div class="block-system red">
-                            <img src="/resource/rustacean.png"alt=""><p>Rust</p></div> <br>
-                        <div class="block-system green">
+                    <div class="stack-block-system"> <br>
+                        <div class="block-system">
+                            <img src="/resource/rustacean.png"alt=""><p>Rust</p></div>
+                        <div class="block-system">
                             <img src="/resource/python.png" alt=""><p>Python</p></div> <br>
                     </div> 
                 </div>    
@@ -230,7 +233,7 @@
                     </div>    
                 </div>    
             </div>    
-            <div class="stack-type scale">
+            <div class="stack-type">
                 <h3>Friends</h3>
                 <div class="basic-lvl"> 
                     <div class="stack-block-system">
@@ -248,9 +251,31 @@
                             </div>
                     </div>    
                 </div>    
-            </div>    
-
+            </div>
         </div>
+        <div class="stack-type">
+            <h3>Stats</h3>
+            <div class="calendary">
+                <div class="stack-block-system">
+                    <div class="calendar">
+                        Loading the calendar...
+                    </div>
+                    
+                    
+                    <script src="./script/github-calendar.js"></script>
+                    <script>
+                        GitHubCalendar(".calendar", "VladTHK", {
+                            responsive: false,
+                            tooltips: false,
+                            global_stats: false
+                        });
+                    </script>    
+                </div>       
+            </div>       
+      </div>    
+    </div>
+
+        
     </div>        
 </div>
 

@@ -1,7 +1,7 @@
 :root {
   --text-color: #f5f5f5;
-  --background-color: #270029;
-  --border-color: #ffffff9f;
+  --background-color: #070709;
+  --border-color: #1e1e20;
   --focus-color: #f1e3b47e;
   --hover-color: #7ad194a4;
   --accentless-color: #dadada8f;
@@ -11,8 +11,9 @@
   --blue-color: #246aebdc;
   --purple-color: #9124ebdc;
   --red-color: #eb2424dc;
-  --black-color: #141414;
-  --gray-color: #1d1d1d;
-  --gray2-color: #303030;
-  --lightgray-color: #525252;
+  --black-color: #000000;
+  --gray-color: #161716;
+  --gray2-color: #242726;
+  --lightgray-color: #353a3a;
+
 }
