@@ -234,9 +234,29 @@
                         </a>
                     </div>    
                 </div>    
-            </div>    
+            </div>
             <div class="stack-type">
-                <h3>Friends</h3>
+                <h3>Stats</h3>
+                <div class="calendary">
+                    <div class="stack-block-system">
+                        <div class="calendar">
+                            Loading the github calendar...
+                        </div>
+                        
+                        
+                        <script src="./script/github-calendar.js"></script>
+                        <script>
+                            GitHubCalendar(".calendar", "VladTHK", {
+                                responsive: false,
+                                tooltips: false,
+                                global_stats: false
+                            });
+                        </script>    
+                    </div>       
+                </div>       
+          </div>        
+            <div class="stack-type">
+                <h3>Community</h3>
                 <div class="basic-lvl"> 
                     <div class="stack-block-system">
                         <div class="foot">
@@ -255,32 +275,12 @@
                 </div>    
             </div>
         </div>
-        <div class="stack-type">
-            <h3>Stats</h3>
-            <div class="calendary">
-                <div class="stack-block-system">
-                    <div class="calendar">
-                        Loading the github calendar...
-                    </div>
-                    
-                    
-                    <script src="./script/github-calendar.js"></script>
-                    <script>
-                        GitHubCalendar(".calendar", "VladTHK", {
-                            responsive: false,
-                            tooltips: false,
-                            global_stats: false
-                        });
-                    </script>    
-                </div>       
-            </div>       
-      </div>    
+        
     </div>
 
         
     </div>        
 </div>
-
 
     <script src="script/additionalButtons.js"></script>
     <script src="script/age_changer.js"></script>
@@ -288,3 +288,5 @@
 </body>
 
 </html>
+
+<!-- This code was written by VladTHK -->
