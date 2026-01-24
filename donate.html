@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="styles/buttons.css">
     <link rel="stylesheet" href="styles/root.css">
 
-    <link rel="icon" href="./resource/moneyicon.gif" type="image/x-icon">
+    <link rel="icon" href="./resource/gif/moneyicon.gif" type="image/x-icon">
     <title>Donate THK</title>
 </head>
 
@@ -29,13 +29,16 @@
         </div>
             <div class="cards">
                 <div class="card-copy card-blue">
-                    <a href="#" id="copyTonkeeper" data-address="UQBHYZK_m__1Yfyl28XZSzXo6G0s8iAHJyQSncKGNijwQPOv" title="Copy tonkeeper id">
+                    <a onclick="copyTon()">
                         <div class="card-name" translate="no">
                             <img src="resource/tonkeeper.jpg" alt="rusticon" class="donateicon">
                             <span>Tonkeeper</span>
                             <div class="link">
                                 <img src="resource/copy.png" alt="link icon" class="linkicon">
                             </div>
+                        </div>
+                        <div class='id-ton'>
+                            <blockquote id="textToCopy">UQBHYZK_m__1Yfyl28XZSzXo6G0s8iAHJyQSncKGNijwQPOv</blockquote>
                         </div>
                         </a>
                 </div>
@@ -60,6 +63,9 @@
 
     </main>
     <div class="right"></div>
+
+    <script src="./script/copy.js"></script>
+
 </body>
 
 </html>
