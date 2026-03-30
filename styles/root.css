@@ -1,19 +1,22 @@
 :root {
-  --text-color: #f5f5f5;
-  --background-color: #070709;
-  --border-color: #1e1e20;
-  --focus-color: #f1e3b47e;
-  --hover-color: #7ad194a4;
-  --accentless-color: #dadada8f;
-  --green-color: #25fc65a4;
-  --orange-color: #eb9b24dc;
-  --yellow-color: #fbff00dc;
-  --blue-color: #246aebdc;
-  --purple-color: #9124ebdc;
-  --red-color: #eb2424dc;
-  --black-color: #000000;
-  --gray-color: #161716;
-  --gray2-color: #242726;
-  --lightgray-color: #353a3a;
+    --primary-color: ;
+    --border-color: #fff;
+    --text-color: #fff;
+    --accentless-color: #bbbbbb8e;
+    --background-color: #06141b;
+    --accent2-color: #fca311;
 
+    --outset-border-radius: 20px ;
+    --inset-border-radius: 10px ;
 }
+
+@font-face {
+    font-family: 'Departure Mono';
+    src: url('../resource/fonts/DepartureMono-Regular.woff2') format('woff2');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+

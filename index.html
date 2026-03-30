@@ -1,293 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=JetBrains+Mono:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
-    <meta name="theme-color" content="#070709">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vlad.thk</title>
 
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/github.css">
-    <link rel="stylesheet" href="styles/imgStyle.css">
-    <link rel="stylesheet" href="styles/buttons.css">
-    <link rel="stylesheet" href="styles/root.css">
-    <link rel="stylesheet" href="styles/adaptive.css">
-
-    <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css">
-
-
-    <link rel="icon" href="resource/icon.png" type="image/x-icon">
-    <title>THK</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/root.css">
+    <link rel="icon" href="./resource/ico/cat.png" type="image/png">
 </head>
-
 <body>
-    <div class="block-left">
-        <div class="block-stack">
-            <h3>My Stack</h3>
-            <div class="stack-type">
-                <h3>Frontend</h3>
-                <div class="basic-lvl">
-                    
-                    <h3>Elementary</h3>   
-                    <div class="stack-block-system">
-                        <div class="block-system orange">
-                            <img src="/resource/html.png" alt=""><p>HTML</p></div>
-                        <div class="block-system blue">
-                            <img src="/resource/css.png" alt=""><p>CSS</p></div>
-                        <div class="block-system orange">
-                            <img src="/resource/javascript.png" alt=""><p>JS</p></div> 
-                        <div class="block-system blue">
-                            <img src="/resource/react.png" alt=""><p>React</p></div>
-                    </div>
-                </div>    
-            </div>    
+    <header>
+        <div class="nav" id="nav">
+            <ul>
+                <a class="cat-nav" href="#hero"><li>thk</li></a>
+                <div class="dynamic-island" style="font-family: Departure Mono" id="island">
 
-            
-            <div class="stack-type">
-                <h3>Backend</h3>
-                <div class="basic-lvl">
-                    <h3>Elementary</h3>   
-                    <div class="stack-block-system"> <br>
-                        <div class="block-system">
-                            <img src="/resource/rustacean.png"alt=""><p>Rust</p></div>
-                        <div class="block-system">
-                            <img src="/resource/python.png" alt=""><p>Python</p></div> <br>
-                    </div> 
-                </div>    
-            </div>    
-      
-            <div class="stack-type">
-                <h3>Design</h3>
-                <div class="basic-lvl">
-                    <h3>Upper-Intermediate</h3>   
-                    <div class="stack-block-system">
-                        <div class="block-system orange">
-                            <img src="/resource/blender.png" alt=""><p>Blender</p></div>
-                        <div class="block-system blue">
-                            <img src="/resource/photoshop.png" alt=""><p>Photoshop</p></div>      
-                        <div class="block-system blue">
-                            <img src="/resource/blockbench.ico" alt=""><p>Blockbench</p></div>    
-                        <div class="block-system white">
-                            <img data-type="logo" src="/resource/aseprite.png" alt=""><p>Aseprite</p></div>    
+                    <div class="island-view active" id="island-status" style="font-family: Departure Mono">
+                        <span id="island-text">/ᐠ - ˕ -マᶻ𝗓 𐰁 #Idle</span>
+                        <div class="shadow-right"></div>
                     </div>
-                    <h3>Elementary</h3>   
-                    <div class="stack-block-system"><br>
-                        <div class="block-system orange">
-                            <img src="/resource/marvelouw.png" alt=""><p>Marvelous</p></div>  <br>
-                        <div class="block-system green">
-                            <img src="/resource/substance.png" alt=""><p>Substance</p></div>  <br>
+
+                    <div class="island-view" id="island-search" style="font-family: Departure Mono">
+                        <input type="text" placeholder="Search..." id="search-input">
+                        <div class="shadow-right"></div>
                     </div>
-                </div>    
-            </div>    
+                
+                </div>
+                <div class="nav-another">
+                    <a href=""><li>🌏︎</li></a>
+                    <a href=""><li>⁜</li></a>
+                </div>
+            </ul>
         </div>
-        <div class="block-gif">
-            <div class="ggif">
-                <img src="/resource/ggif.gif" alt="gif-with-dog">
+        <div class="bottom-links">
+            <a href=""></a>
+        </div>
+    </header>
+    <main class="no-scrollbar">
+        <div class="hero" id="hero">
+            <div class="hero-content">
+                <h1>Vlad.thk</h1>
+                <h3>Fastly. Security. Simple.</h3><br>
+                <div class="tags">
+                    <div class="tag"><h6>모</h6><h6>Fullstack</h6></div>
+                    <div class="tag"><h6>❀</h6><h6>Design</h6></div>
+                    <div class="tag"><h6>֎</h6><h6>AI-Engineer</h6></div>
+                </div>
+            </div>
+
+            <div class="clue-scroll">
+                <h3>
+                    <a href="#about-me">
+                      <span class="float">Scroll down 🠋</span>
+                    </a>
+                </h3>
             </div>
         </div>
-    </div>
 
+        <div class="about-me" id="about-me">
+            <div class="about-me-content">
+                <img src="./resource/img/bhead_thk.gif" alt="big_head">
+                <div class="about-me-description">
+                    <h1>Кто я?</h1>
+                    <span style="background-color: var(--background-color);">
+                        17y.o. Full-Stack разработчик, известный в сети как <i><strong>VladTHK</strong>, Thinker, THK</i>. <br>
+                        Обучаюсь по специальности
+                        <span style="color: var(--accentless-color);">
+                        «Разработчик информационных систем и веб‑приложений»,
+                        </span>
+                        но в основном являюсь самоучкой. Уже несколько лет ежедневно занимаюсь программированием и разработкой. <br>
+                        <span style="color: var(--accentless-color);"">
+                            P.S. Буду рад любым коммерческим предложениям.(•˕•マ! 
+                        </span>
+                    </span>
+                </div>
 
+            </div>
+            
+            <div class="clue-scroll">
+                <h3>
+                    <a href="#blocks">
+                      <span class="float">Scroll 🠉🠋</span>
+                    </a>
+                  </h3>
+            </div>
+        </div>
 
-    <div class="block-centre">
-        <div class="block-about-me">
-            <div class="about-me">
-                <span class="kamodzi">(❁´◡`❁)</span>
-                <div class="nick">
-                    <h1 class="name">VladTHK</h1><span class="accentless">aka: THK, Thinker, ThinkTHK, etc...</span>
+        <div class="blocks" id="blocks">
+            <div class="stacks small-container">
+                <br>
+                <div class="wakatime">
+                    <h3>Stack</h3>
+                </div>
+                
+                <br>
+                <div class="inset-small-container no-scrollbar">
+                    <div class="shadow-top"></div>                    
+                    <div class="stack">
+                        <h3 title="₀">HTML</h3>
+                        <h3 title="₁">CSS</h3>
+                        <h3 title="₂">SCSS</h3>
+                        <h3 title="₃">JavaScript</h3>
+                        <h3 title="₄">TypeScript</h3>
+                        <h3 title="₅">Python</h3>
+                        <h3 title="₆">SQLAlchemy</h3>
+                        <h3 title="₇">Blender</h3>
+                        <h3 title="₈">Photoshop</h3>
+                        <h3 title="₉">Aseprite</h3>              
+                        <h3 title="₁₀">SQLite</h3>              
+            
+                    </div>
+                    <div class="shadow-bottom"></div>
+                </div>
+                <br>
+
+                <h6>Scroll ⮃</h6> 
+            </div>
+            <div class="links small-container">
+                <br>
+                <div class="wakatime">
+                    <h3>Links</h3>
+                </div>
+                
+                <br>
+                <div class="inset-small-container no-scrollbar">
+                    <div class="shadow-top"></div>                    
+                    <div class="link"><hr>
+                        <div class="sub-link">
+                            <a target="_blank" href="https://t.me/VladTHK">
+                                <h2>Telegram</h2><h2>│</h2>
+                                <span>Мой телеграмм.</span>
+                            </a>    
+                        </div><hr>
+                        <div class="sub-link">
+                            <a href="https://t.me/ThinkTHK">
+                                <h2>Telegram Blog</h2><h2>│</h2>
+                                <span>Мой блог в телеграм канале.</span>
+                            </a>    
+                        </div><hr>
+                        <div class="sub-link">
+                            <a target="_blank" href="https://github.com/Vladthk">
+                                <h2>GitHub</h2><h2>│</h2>
+                                <span>Мой публичный GitHub с проектами.</span>
+                            </a>    
+                        </div><hr>
+                        <div class="sub-link">
+                            <a target="_blank" href="https://www.threads.com/@vlad.thk?igshid=NTc4MTIwNjQ2YQ==">
+                                <h2>Threads</h2><h2>│</h2>
+                                <span>Мой слоп в Threads.</span>
+                            </a>    
+                        </div><hr>
+                        <div class="sub-link">
+                            <a target="_blank" href="https://monkeytype.com/profile/VladTHK">
+                                <h2>MonkeyType</h2><h2>│</h2>
+                                <span>Тренирую скорость печати...</span>
+                            </a>    
+                        </div><hr>
+                        <div class="sub-link">
+                            <a target="_blank" href="https://www.chess.com/member/ThinkerTHK">
+                                <h2>Chess.com</h2><h2>│</h2>
+                                <span>Иногда играю в шахматы здесь.</span>
+                            </a>    
+                        </div><hr>
+                        <div class="sub-link">
+                            <a target="_blank" href="https://steamcommunity.com/profiles/76561198969639469/">
+                                <h2>Steam</h2><h2>│</h2>
+                                <span>Играем в игрушки. ✪ω✪</span>
+                            </a>    
+                        </div><hr>
+                        <div class="sub-link">
+                            <a target="_blank" href="https://pinterest.com/ThinkerTHK/_profile">
+                                <h2>Pinterest</h2><h2>│</h2>
+                                <span>Изрекдо что-то выкладываю</span>
+                            </a>    
+                        </div><hr>
+       
+            
+                    </div>
+                    <div class="shadow-bottom"></div>
+                </div>
+                <br>
+
+                <h6>Scroll ⮃</h6> 
+            </div>
+            <div class="websites small-container" >
+                <h3>Different Websites</h3>
+
+                <div class="inset-small-container no-scrollbar" >                
+                    <div class="shadow-top"></div> 
+                    <a href="#hero">
+                        <div style="background: url('./resource/img/thk.webp'); background-size: 100% 100%; " class="website">
+                            <h2>VladTHK</h2>
+                            <h4>░▒▓</h4>
+                            <p>Oсновной сайт разработчика.</p>
+                        </div>
+                    </a>
+                    <a target="_blank" href="https://nbvk.kittyy.ru/">
+                        <div style="background-image: url('./resource/img/teez.webp'); background-size: 100% 100%;" class="website">
+                            <h2>Teez</h2>
+                            <h4>⚥</h4>
+                            <p>Teez - сайт где можно подчеркнуть какие-то идеи, молодой талантливый разработчик /ᐠ｡ꞈ｡ᐟ\.</p>
+                        </div>
+                    </a>
+                    <a target="_blank" href="https://nbvk.nichind.dev/">
+                        <div style="background-image: url('./resource/img/nichind.webp'); background-size: cover;" class="website">
+                            <h2>Nichind</h2>
+                            <h4>｡˚○</h4>
+                            <p>Nichind - сайт с необычными визуальными решениями. ฅʕ••ʔฅ </p>
+                        </div>
+                    </a>
+                    <div class="shadow-bottom"></div>
+
                 </div><br>
-
-                <div class="bio">
-                    <span><span id="age_changer">16</span> y.o, focused on backend.</span>
-                    <span>developer from Siberia, Russia.</span>
-                </div>
-            </div>
-
-            <div class="me">
-                <video src="./resource/me.mp4" autoplay loop muted playsinline>
-                    Ваш браузер не поддерживает видео.
-                </video>
-            </div>
-
-
-            <div class="buttons" translate="no">
-                <a href="https://t.me/VladTHK">Telegram</a>
-                <a href="https://t.me/ThinkTHK">Blog</a>
-                <a href="https://github.com/Vladthk">GitHub</a>
-                <a href="donate.html">Donate</a>
-                <a href="https://monkeytype.com/profile/VladTHK">MonkeyType</a>
-                <a href="https://www.threads.com/@vlad.thk?igshid=NTc4MTIwNjQ2YQ==">Threads</a>
-                <a id="toggleAdditionalButtons">More...</a>
-            </div>
-            <div id="moreButtons" class="buttons" translate="no" style="display: none;">
-                <a href="https://steamcommunity.com/profiles/76561198969639469/">Steam</a>
-                <a href="https://www.chess.com/member/ThinkerTHK">Chess.com</a>
-                <a href="https://www.duolingo.com/profile/ThinkerTHK">Duolingo</a>
-                <a href="https://pinterest.com/ThinkerTHK/_profile">Pinterest</a>
-                <a href="https://www.youtube.com/@ThinkerTHK">Youtube</a>
-            </div>
-        </div>
-        <div class="block-projects">
-            <div class="cards">
-                
-                <div class="card-red rust-card">
-                    <a href="rustvictory.html" target="_blank">
-                    <div class="card-name" translate=""no">
-                        <img src="resource/rustIcon.gif" alt="RST" class="cardicon">
-                        <span>Rust Victory</span>
-                        <div class="link">
-                            <span>rustvictory.rust →</span>             
-                        </div>
-                    </div>
-                        <p class="cardtext">2010-2025 Rust has been the best lenguage for programming.</p>
-                        </a>
-                    </div>
-
-                <div class="card-blue sibranium-card">
-                    <a href="https://app.ston.fi/pools/EQArtoQf0bcsgce3--Kh21AYWx7zHnLkx4PGOZly5d_Jr9Eq" target="_blank">
-                    <div class="card-name" translate=""no">
-                        <img src="resource/sibraniumcoin.png" alt="SIB" class="sibcardicon">
-                        <span>Sibranium</span>
-                        <div class="link">
-                            <span>ston.fi →</span>                    
-                        </div>
-                    </div>
-                        <p class="cardtext">My ROFL meme coin project on Toncoin.</p>
-                        </a>
-                    </div>
-    
-
-                <div class="card-purple thk-card">
-                    <a href="https://github.com/VladTHK/THK_font" target="_blank">
-                    <div class="card-name" translate=""no">
-                        <img src="resource/thk.png" alt="THK" class="cardicon">
-                        <span>Font.thk</span>
-                        <div class="link">
-                            <span>github.thk →</span>                    
-                        </div>
-                    </div>
-                        <p class="cardtext">My handwritten font reflecting my own handwriting.</p>
-                        </a>
-                    </div>
-
-                <div class="card-blue tasktracker-card">
-                    <a href="https://app.ston.fi/pools/EQArtoQf0bcsgce3--Kh21AYWx7zHnLkx4PGOZly5d_Jr9Eq" target="_blank">
-                    <div class="card-name" translate=""no">
-                        <img src="resource/tasktracker.png" alt="TT" class="cardicon">
-                        <span>TaskTrackerAPI</span>
-                        <div class="link">
-                            <span>github.tt →</span>                    
-                        </div>
-                    </div>
-                        <p class="cardtext"> - Simple task management system.</p>
-                        </a>
-                </div>
-                
-
-                </div>
+                <h6>Scroll ⮃</h6>
             </div>
             
-            <footer>
-                    <span class="accentless copysr">&copysr; VladTHK</span>
-                </div>
+            <div style="width: 100%; justify-content: center; display: flex; flex-wrap: wrap; backdrop-filter: blur(3px);" class="technical-work">
+                <h1 style="color: var(--accent2-color);">Technical Work...🚧🚧🚧</h1>
 
-            </footer>
         </div>
-    </div>
+    </main>
+    <footer>
 
-<div class="block-right">
-        <div class="block-info">
-            <h3>About me</h3>
-            <div class="stack-type">
-                <h3>Languages</h3>
-                <div class="basic-lvl"> 
-                    <div class="stack-block-system">
-                       <br> <div class="block-system eng">
-                            🇬🇧 English - B1 </div> <br>
-                        <div class="block-system rus">
-                            🇷🇺 Russian - Native</div> <br>
-                    </div>
-                    <div class="info">
-                        <div class="about-me-block-system">
-                            
-                        </div>
-                    </div>    
-                </div>    
-            </div>    
-            <div class="stack-type">
-                <h3>Organization</h3>
-                <div class="basic-lvl"> 
-                    <div class="stack-block-system">
-                        <a href="https://github.com/doelsquad">
-                       <div class="doelsquad">
-                            <img src="./resource/doelsquad.jpg" alt="">
-                            <div class="discription-block-system">
-                                <p>DoelSquad</p>
-                                <h3>
-                                    This is a squad created by my friends.
-                                    We love creating OUR OWN projects, that's our strength 💪
-                                </h3>
-                            </div>
-                        </div>
-                        </a>
-                    </div>    
-                </div>    
-            </div>
-            <div class="stack-type">
-                <h3>Stats</h3>
-                <div class="calendary">
-                    <div class="stack-block-system">
-                        <div class="calendar">
-                            Loading the github calendar...
-                        </div>
-                        
-                        
-                        <script src="./script/github-calendar.js"></script>
-                        <script>
-                            GitHubCalendar(".calendar", "VladTHK", {
-                                responsive: false,
-                                tooltips: false,
-                                global_stats: false
-                            });
-                        </script>    
-                    </div>       
-                </div>       
-          </div>        
-            <div class="stack-type">
-                <h3>Community</h3>
-                <div class="basic-lvl"> 
-                    <div class="stack-block-system">
-                        <div class="foot">
-                            <div class="link-button">
-                                <div class="stef1428-button">
-                                <a href="https://1428stef.github.io/WikiHachi/" title="Ссылка на сайт: Stef1428"><img src="./resource/stef1428_but.png" alt="stef1428-button"></a>
-                                </div>
-                                <div class="thk-button">
-                                <a href="https://vladthk.github.io" title="Ссылка на сайт: VladTHK"><img src="./resource/thk_but.png" alt="thk_button"></a>
-                                </div>
-                                <div class="teez-button">
-                                <a href="https://nbvk.kittyy.ru/" title="Ссылка на сайт: Teez2157"><img src="./resource/teez_but.png" alt="teez-button"></a>
-                                </div>
-                            </div>
-                    </div>    
-                </div>    
-            </div>
-        </div>
-        
-    </div>
-
-        
-    </div>        
-</div>
-
-    <script src="script/additionalButtons.js"></script>
-    <script src="script/age_changer.js"></script>
-
+    </footer>
+    
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/dynamicIsland.js"></script>
 </body>
-
 </html>
-
-<!-- This code was written by VladTHK -->
