@@ -317,7 +317,9 @@ main > div {
 
 .blocks {
     padding-top: 60px;
+    padding-right: 35px;
     scroll-snap-align: end;
+    width: 100%;
     height: 100vh;
     margin: 100px 20px;
     display: flex;
@@ -501,5 +503,13 @@ main > div {
     bottom: 10px;
 }
 
-
+.technical-work {
+    padding-top: 60px;
+    scroll-snap-align: end;
+    height: 100vh;
+    margin: 100px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
