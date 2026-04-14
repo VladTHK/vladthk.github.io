@@ -185,7 +185,7 @@ main > div {
     user-select: none;
     position: relative;
     text-align: center;
-    font-size: 60px;
+    font-size: 40px;
     filter: drop-shadow( 0 0 15px 13px  rgb(0, 0, 0));
     text-shadow: 0 0 10px white, 0 0 2px black, 0 0 22px black, 0 0 22px black;
 }
@@ -193,7 +193,7 @@ main > div {
 .hero-content > h1::after {
     width: max-content;
     content: "ᓚᘏᗢ";
-    font-size: 30px;
+    font-size: 100px;
     position: absolute;
     top: 20px;
     right: -10px;
@@ -203,13 +203,13 @@ main > div {
 }
 
 .hero-content > h1:hover::after {
-    font-size: 30px;
+    font-size: 40px;
     opacity: 1;
     transform: scale(1.05) rotate(5deg);
 }
 
 .tags {
-    max-width: 450px;
+    width: 100%;
     gap: 10px;
     display: flex;
     flex-wrap: wrap;
