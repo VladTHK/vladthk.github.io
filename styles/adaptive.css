@@ -1,0 +1,31 @@
+@media (max-width: 768px) {
+    .dynamic-island {
+        position: relative;
+        left: auto;
+        transform: none;
+        margin: 10px auto;
+    }
+
+    body {
+        background-size: 4%;
+    }
+
+    .cat-nav {
+        display: none;
+    }
+
+    .about-me-content {
+        height: 80%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .about-me-description {
+        width: 300px;
+        text-wrap: balance;
+    }
+
+
+@media (max-width: 480px) {
+    ...
+}

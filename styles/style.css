@@ -10,6 +10,8 @@ html {
     scroll-behavior: smooth;
 }
 
+
+
 .no-scrollbar {
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -21,6 +23,7 @@ body {
     background: var(--background-color) url(../resource/img/dot-single.svg);
     background-size: 0.7%;
     color: var(--text-color);
+    overflow-x: hidden;
 }
 
 a {
@@ -79,6 +82,7 @@ header {
 
 .dynamic-island {
     font-family: "Departure Mono";
+    font-size: small;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -175,12 +179,13 @@ main > div {
 }
 
 
+
 .hero-content {
     cursor:grab;
     user-select: none;
     position: relative;
     text-align: center;
-    font-size: 30px;
+    font-size: 60px;
     filter: drop-shadow( 0 0 15px 13px  rgb(0, 0, 0));
     text-shadow: 0 0 10px white, 0 0 2px black, 0 0 22px black, 0 0 22px black;
 }
@@ -315,7 +320,11 @@ main > div {
     text-wrap: balance;
 }
 
+
+/* ---------------------------------------------------------------- */
+
 .blocks {
+    gap: 10px;
     padding-top: 60px;
     padding-right: 35px;
     scroll-snap-align: end;
@@ -324,10 +333,10 @@ main > div {
     margin: 100px 20px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 
-.small-container {
+.block{
     position: relative;
     width: 300px;
     max-height: 300px;
@@ -335,9 +344,16 @@ main > div {
     background: var(--background-color);
     border: solid 2px var(--border-color);
     border-radius: var(--outset-border-radius);
+
 }
 
-.inset-small-container {
+.block-name {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.inset-block {
     position: relative;
     padding: 10px;
     user-select: none;
@@ -348,14 +364,19 @@ main > div {
     max-height: 220px;
 }
 
-.small-container >h6 {
+.block > h6 {
+    text-align: center;
     user-select: none;
-    position: absolute;
+
     bottom: 5px;
     left: 43%;
 }
 
-.stack h3, .link h3{
+.block > h3 {
+    text-align: center;
+}
+
+.stack h3{
     scroll-snap-align: center;
     cursor: grab;
     position: relative;
@@ -394,20 +415,31 @@ main > div {
 }
 
 .links {
-    width: 600px;
+    max-width: 600px;
+    flex: 1 1 auto;
 }
 
 .sub-link a {
     display: flex;
     flex-wrap: nowrap;
+    text-wrap: nowrap;
     gap: 5px;
     align-items: end;
 }
 
 .sub-link span {
+    text-align: left;
+    width: 100%;
+    position: relative;
     font-family: "Departure Mono";
     color: var(--accentless-color);
     font-size: small;
+}
+
+.sub-link span::after {
+    content: "→";
+    position: absolute;
+    right: 5px;
 }
 
 .sub-link a:before{
@@ -420,24 +452,13 @@ main > div {
     font-size: 25px;
 }
 
-.wakatime {
+.block-name {
     position: absolute;
     width: max-content;
     bottom: 0 auto;
     left: 40%;
 }
 
-.websites {
-  position: relative;
-  width: 300px;
-  max-height: 300px;
-  overflow-y: auto;
-  scroll-snap-type: y mandatory;
-  padding: 10px;
-  background: var(--background-color);
-  border: solid 2px var(--border-color);
-  border-radius: var(--outset-border-radius);
-}
 
 .shadow-bottom {
   position: sticky;
@@ -459,14 +480,9 @@ main > div {
 }
 
 
-.websites > h3, .websites > h6, .stacks > h6, .projects > h2 {
-    text-align: center;
-}
-
 
 .website {
     scroll-snap-align: center;
-    scroll-snap-stop: normal;
     scroll-behavior: smooth;
     scroll-padding: 0 10px 0 0;
     margin-bottom: 10px;
@@ -476,7 +492,7 @@ main > div {
     border: solid 2px var(--border-color);  
     border-radius: var(--inset-border-radius);
     box-shadow: inset 0 0 30px 28px black;
-    min-height: 200px;
+    min-height: 170px;
     height: 100%;
     width: 100%;
     justify-content: space-between;
@@ -513,3 +529,20 @@ main > div {
     justify-content: space-between;
 }
 
+
+.reveal {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    filter: blur(5px);
+    transition: 0.6s;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+}
+
+.reveal:nth-child(1) { transition-delay: 0.1s; }
+.reveal:nth-child(2) { transition-delay: 0.2s; }
+.reveal:nth-child(3) { transition-delay: 0.3s; }

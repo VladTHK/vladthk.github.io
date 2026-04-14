@@ -10,13 +10,14 @@
 
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/root.css">
+    <link rel="stylesheet" href="./styles/adaptive.css">
     <link rel="icon" href="./resource/ico/cat.png" type="image/png">
 </head>
 <body>
     <header>
         <div class="nav" id="nav">
             <ul>
-                <a class="cat-nav" href="#hero"><li>thk</li></a>
+                <a class="cat-nav" href="#hero""><li>thk</li></a>
                 <div class="dynamic-island" style="font-family: Departure Mono" id="island">
 
                     <div class="island-view active" id="island-status" style="font-family: Departure Mono">
@@ -41,9 +42,9 @@
             <a href=""></a>
         </div>
     </header>
-    <main class="no-scrollbar">
+    <main class="no-scrollbar" style="overflow-x: hidden;">
         <div class="hero" id="hero">
-            <div class="hero-content">
+            <div class="hero-content reveal">
                 <h1>Vlad.thk</h1>
                 <h3>Fastly. Security. Simple.</h3><br>
                 <div class="tags">
@@ -65,7 +66,7 @@
         <div class="about-me" id="about-me">
             <div class="about-me-content">
                 <img src="./resource/img/bhead_thk.gif" alt="big_head">
-                <div class="about-me-description">
+                <div class="about-me-description reveal">
                     <h1>Кто я?</h1>
                     <span style="background-color: var(--background-color);">
                         17y.o. Full-Stack разработчик, известный в сети как <i><strong>VladTHK</strong>, Thinker, THK</i>. <br>
@@ -91,15 +92,11 @@
             </div>
         </div>
 
-        <main class="blocks" id="blocks">
-            <div class="stacks small-container">
+        <div class="blocks" id="blocks">
+            <div class="stacks block">
                 <br>
-                <div class="wakatime">
-                    <h3>Stack</h3>
-                </div>
-                
-                <br>
-                <div class="inset-small-container no-scrollbar">
+                <h3>Stack ⮃</h3>      
+                <div class="inset-block no-scrollbar">
                     <div class="shadow-top"></div>                    
                     <div class="stack">
                         <h3 title="₀">HTML</h3>
@@ -118,18 +115,12 @@
                     </div>
                     <div class="shadow-bottom"></div>
                 </div>
-                <br>
 
-                <h6>Scroll ⮃</h6> 
             </div>
-            <div class="links small-container">
+            <div class="links block">
                 <br>
-                <div class="wakatime">
-                    <h3>Links</h3>
-                </div>
-                
-                <br>
-                <div class="inset-small-container no-scrollbar">
+                    <h3>Links ⮃</h3>
+                <div class="inset-block no-scrollbar">
                     <div class="shadow-top"></div>                    
                     <div class="link"><hr>
                         <div class="sub-link">
@@ -180,22 +171,20 @@
                                 <span>Изрекдо что-то выкладываю</span>
                             </a>    
                         </div><hr>
-       
-            
                     </div>
+
                     <div class="shadow-bottom"></div>
+                    <br>
                 </div>
-                <br>
-
-                <h6>Scroll ⮃</h6> 
+                
             </div>
-            <div class="websites small-container" >
-                <h3>Different Websites</h3>
-
-                <div class="inset-small-container no-scrollbar" >                
+            <div class="websites block" >
+                <br>
+                <h3>Different Websites ⮃</h3>
+                <div class="inset-block no-scrollbar" >                
                     <div class="shadow-top"></div> 
                     <a href="#hero">
-                        <div style="background: url('./resource/img/thk.webp'); background-size: 100% 100%; " class="website">
+                        <div style="background: url('./resource/img/thk.webp'); background-size: 100% 100%; " alt="This_Site" class="website">
                             <h2>VladTHK</h2>
                             <h4>░▒▓</h4>
                             <p>Oсновной сайт разработчика.</p>
@@ -217,13 +206,11 @@
                     </a>
                     <div class="shadow-bottom"></div>
 
-                </div><br>
-                <h6>Scroll ⮃</h6>
+                </div>
             </div>
             
-        </main>
+        </div>
 
-            <pre></pre>
 
 
 
