@@ -18,7 +18,7 @@ html {
 }
 
 body {
-    font-family: "Pixelify Sans", "Departure Mono";
+    font-family: "Departure Mono", "Pixelify Sans";
     position: relative;
     background: var(--background-color) url(../resource/img/dot-single.svg);
     background-size: 0.7%;
@@ -80,69 +80,6 @@ header {
     gap: 20px;
 }
 
-.dynamic-island {
-    font-family: "Departure Mono";
-    font-size: small;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    
-    height: 35px;
-    min-width: 200px;
-
-    background: var(--background-color);
-    border: 2px solid var(--border-color);
-    border-radius: var(--outset-border-radius);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    overflow: hidden;
-    cursor: pointer;
-
-    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-.dynamic-island > form > input {
-    font-family: "Departure Mono";
-    position: relative;     
-    width: 100%;             
-    height: 30px;
-    padding: 5px;
-    background: none;
-    border: transparent;
-    outline: none;
-    color: var(--text-color);
-    filter: drop-shadow(0 0 2px white);
-    transition: all 0.3s ease;
-}
-
-.island-view {
-    font-family: "Departure Mono";
-    color: var(--accentless-color);
-    position: absolute;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s ease;
-}
-
-.island-view.active {
-    font-family: "Departure Mono";
-    opacity: 1;
-    pointer-events: auto;
-}
-
-#search-input {
-    background: none;
-    border: none;
-    outline: none;
-    font-family: "Departure Mono", "monospace";
-    color: var(--text-color);
-    padding: 5px 10px;
-    width: 150px;
-}
-
 
 .shadow-right {
   position: absolute;
@@ -170,7 +107,7 @@ main > div {
 
 
 
-.hero, .stack-block, .contacts-block {
+.hero, .stack-block, .contacts-block, .projects-block {
     position: relative;
     scroll-snap-align: start;
     display: grid;
@@ -181,6 +118,7 @@ main > div {
 
 
 .hero-content {
+    font-family: "Pixelify Sans";
     user-select: none;
     position: relative;
     text-align: center;
@@ -208,37 +146,83 @@ main > div {
     transform: scale(1.05) rotate(5deg);
 }
 
-.tags {
-    width: 100%;
-    gap: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.tag {
+.hero-content a {
+    font-family: "Departure Mono";
     text-shadow: none;
-    display: flex;
-    min-width: 100px;
+    position: relative;
+
+    display: inline-flex;
     align-items: center;
-    box-shadow: 0 0 15px 3px  var(--background-color);
-    gap: 5px;
-    font-size: 25px;
-    padding: 0 10px;
-    color: var(--accentless-color);
-    background: var(--background-color);
-    border: solid 2px var(--accentless-color);
-    border-radius: var(--outset-border-radius);
-    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    justify-content: center;
+
+    margin-top: 15px;
+    padding: 12px 18px;
+
+    font-size: 13px;
+    letter-spacing: 1px;
+
+    color: var(--text-color);
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(18,24,38,0.95),
+            rgba(8,12,20,0.95)
+        );
+
+    border: 2px solid var(--border-color);
+    border-radius: var(--inset-border-radius);
+
+    box-shadow:
+        inset 0 0 12px rgba(0,0,0,0.9),
+        inset 0 0 25px rgba(30,50,120,0.15),
+        0 0 12px rgba(0,0,0,0.4);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.2s cubic-bezier(0.445,0.05,0.55,0.95),
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+.hero-content a::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent,
+            rgba(77,109,214,0.15),
+            transparent
+        );
+
+    transform: translateX(-100%);
+
+    transition: transform 0.5s ease;
 }
 
-.tag:hover {
-    box-shadow: inset 0 0 30px 28px var(--background-color), 0 0 5px white;
-    transform: scale(1.05);
-    border: solid 2px var(--border-color);
-    color: var(--text-color);
-    animation: 2.2s ease normal none infinite running trambling-animation;
+.hero-content a:hover {
+
+    transform: translateY(-2px) scale(1.02);
+
+    border-color: #4d6dd6;
+
+    box-shadow:
+        inset 0 0 20px rgba(10,20,60,0.95),
+        0 0 12px rgba(77,109,214,0.35),
+        0 0 30px rgba(77,109,214,0.12);
+}
+
+.hero-content a:hover::before {
+    transform: translateX(100%);
+}
+.hero-content a:active {
+    transform: scale(0.97);
 }
 
 
@@ -708,25 +692,404 @@ main > div {
 
 /* ---------------------------------------------------------------- */
 
+.projects-block {
+    position: relative;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: "Departure Mono";
+}
 
-.block{
+.projects-content {
+    overflow: hidden;
+    height: 80vh;
+    width: 85%;
+    box-shadow: 0 0 20px 8px var(--background-color);
+    background: var(--background-color);
+    padding: 15px 15px 30px 15px;
+    border: 2px solid var(--border-color);
+    border-radius: var(--outset-border-radius);
+}
+
+.projects-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.projects-header h1 {
+    text-shadow: 0 0 10px rgba(255,255,255,0.15);
+}
+
+.projects-header span {
+    font-size: 13px;
+    color: var(--accentless-color);
+}
+
+
+.projects-filters {
+    display: flex;
+    gap: 12px;
+
+    overflow-x: auto;
+
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+}
+
+.filter-btn {
+    cursor: pointer;
+    z-index: 10;
+    padding: 10px 14px;
+
+    background: rgba(255,255,255,0.03);
+
+    border: 2px solid rgba(255,255,255,0.05);
+    border-radius: var(--inset-border-radius);
+
+    color: var(--text-color);
+
+    font-family: "Departure Mono";
+
+    transition: all 0.2s ease;
+
+    white-space: nowrap;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    border-color: #4d6dd6;
+
+    background: rgba(77,109,214,0.08);
+
+    box-shadow:
+        inset 0 0 15px rgba(20,40,120,0.7),
+        0 0 6px rgba(77,109,214,0.25);
+}
+
+
+.projects-grid {
+    display: grid;
+    overflow: auto;
+    grid-template-columns:
+        repeat(auto-fill, minmax(320px, 1fr));
+    gap: 22px;
+    max-height: 70vh;
+    padding-right: 5px;
+    padding-bottom: 120px;
+}
+
+
+.project-card {
+    cursor: pointer;
+    position: relative;
+    background: var(--background-color);
+    border: 2px solid var(--border-color);
+    border-radius: var(--outset-border-radius);
+    overflow: hidden;
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+    box-shadow:
+        inset 0 0 20px rgba(0,0,0,0.95),
+        0 0 10px 5px rgba(0,0,0,0.45);
+}
+
+.project-card:hover {
+    transform: scale(0.98);
+
+    border-color: #4d6dd6;
+
+    box-shadow:
+        inset 0 0 30px rgba(10,20,60,0.9),
+        0 0 10px rgba(77,109,214,0.25);
+}
+
+
+.project-image {
     position: relative;
     width: 100%;
-    max-height: 300px;
-    margin: 10px;
-    background: var(--background-color);
-    border: solid 2px var(--border-color);
+    height: 190px;
+    overflow: hidden;
+}
+
+.project-image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+
+    filter: grayscale(0.2);
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.04);
+    filter: grayscale(0);
+}
+
+
+.project-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0,0,0,0.4);
+
+    opacity: 0;
+
+    font-size: 22px;
+
+    letter-spacing: 3px;
+
+    backdrop-filter: blur(3px);
+
+    transition: 0.25s ease;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+
+.project-info {
+    padding: 18px;
+}
+
+.project-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+
+    margin-bottom: 12px;
+}
+
+.project-top h2 {
+    font-size: 22px;
+}
+
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.project-tags span {
+    padding: 5px 8px;
+
+    font-size: 10px;
+
+    color: var(--accentless-color);
+
+    background: rgba(255,255,255,0.03);
+
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 8px;
+}
+
+
+.project-info p {
+    font-size: 13px;
+
+    color: #c7d0db;
+
+    line-height: 1.5;
+}
+
+
+.project-modal {
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0,0,0,0.5);
+
+    backdrop-filter: blur(10px);
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: 0.3s ease;
+
+    z-index: 9999;
+}
+
+.project-modal.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.project-modal-content {
+    position: relative;
+
+    width: 800px;
+    max-width: 90%;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    padding: 25px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(6,10,18,0.98),
+            rgba(10,15,25,0.98)
+        );
+
+    border: 2px solid var(--border-color);
     border-radius: var(--outset-border-radius);
 
+    box-shadow:
+        inset 0 0 30px rgba(0,0,0,0.9),
+        0 0 20px rgba(77,109,214,0.15);
+
+    transform: scale(0.9);
+
+    transition: 0.3s ease;
 }
 
-.block-name {
+.project-modal.active .project-modal-content {
+    transform: scale(1);
+}
+
+
+
+.modal-image {
     width: 100%;
-    display: flex;
-    justify-content: center;
+    height: 320px;
+
+    object-fit: cover;
+
+    border-radius: var(--inset-border-radius);
+
+    margin-bottom: 20px;
 }
 
-.inset-block, .stack-inset-block {
+
+.modal-title {
+    margin-bottom: 10px;
+}
+
+.modal-stack {
+    color: var(--accentless-color);
+
+    font-size: 13px;
+}
+
+
+.modal-description {
+    margin-top: 25px;
+}
+
+.modal-description p {
+    margin-bottom: 15px;
+
+    line-height: 1.7;
+
+    color: #c7d0db;
+
+    font-size: 14px;
+}
+
+
+.modal-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+.modal-tech span {
+    padding: 8px 12px;
+
+    background: rgba(255,255,255,0.03);
+
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 10px;
+
+    font-size: 12px;
+}
+
+
+
+.modal-links {
+    display: flex;
+    gap: 14px;
+
+    margin-top: 30px;
+}
+
+.modal-links a {
+    padding: 12px 16px;
+
+    border: 2px solid rgba(255,255,255,0.05);
+    border-radius: var(--inset-border-radius);
+
+    transition: 0.2s ease;
+}
+
+.modal-links a:hover {
+    border-color: #4d6dd6;
+
+    background: rgba(77,109,214,0.08);
+
+    box-shadow:
+        inset 0 0 15px rgba(20,40,120,0.7),
+        0 0 6px rgba(77,109,214,0.25);
+}
+
+
+.close-modal {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    width: 42px;
+    height: 42px;
+
+    cursor: pointer;
+
+    background: rgba(255,255,255,0.03);
+
+    border: 2px solid rgba(255,255,255,0.05);
+    border-radius: 12px;
+
+    color: white;
+
+    font-size: 18px;
+
+    transition: 0.2s ease;
+}
+
+.close-modal:hover {
+    border-color: #4d6dd6;
+
+    background: rgba(77,109,214,0.08);
+}
+
+/* ---------------------------------------------------------------- */
+
+
+
+.stack-inset-block {
     position: relative;
     padding: 10px;
     user-select: none;
@@ -737,70 +1100,6 @@ main > div {
     max-height: 220px;
     width: 100%;
 }
-
-.block > h6 {
-    text-align: center;
-    user-select: none;
-
-    bottom: 5px;
-    left: 43%;
-}
-
-.block > h3 {
-    text-align: center;
-}
-
-
-
-.link {
-    gap: 5px;
-}
-
-.links {
-    max-width: 600px;
-    flex: 1 1 auto;
-}
-
-.sub-link a {
-    display: flex;
-    flex-wrap: nowrap;
-    text-wrap: nowrap;
-    gap: 5px;
-    align-items: end;
-}
-
-.sub-link span {
-    text-align: left;
-    width: 100%;
-    position: relative;
-    font-family: "Departure Mono";
-    color: var(--accentless-color);
-    font-size: small;
-}
-
-.sub-link span::after {
-    content: "→";
-    position: absolute;
-    right: 5px;
-}
-
-.sub-link a:before{
-    font-size: 25px;
-    content: "░";
-}
-
-.sub-link a:hover::before {
-    content: "•";
-    font-size: 25px;
-}
-
-.block-name {
-    position: absolute;
-    width: max-content;
-    bottom: 0 auto;
-    left: 40%;
-}
-
 
 .shadow-bottom {
   position: sticky;
