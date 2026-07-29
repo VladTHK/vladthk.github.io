@@ -1,0 +1,45 @@
+:root {
+  --bg: #09090b;
+  --surface: #121314;
+  --surface-hover: #161616; 
+
+  --text: #F5f5f5;
+  --text-secondary: #A0A0A0;
+  --text-muted: #666666;
+
+  --border-color: #36363D;
+  --border: 1px solid var(--border-color);
+
+  --border-radius: 10px;
+  --border-radius-large: 24px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.125;
+}
+
+
+body {
+  background-image: url("./assets/images/logothk.png");
+  background-color: var(--bg);
+  position: relative;
+  color: var(--text);
+}
+
+@font-face {
+  font-family: "Dmono";
+  src: url("./assets/fonts/DepartureMono-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cairopixel";
+  src: url("./assets/fonts/Cairopixel.woff2") format("woff2");
+  font-style: normal;
+  font-display: swap;
+}
+
