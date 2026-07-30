@@ -1,0 +1,30 @@
+.block {
+  padding: 25px;
+  height: 95vh;
+}
+
+.gitButton {
+  color: var(--text-muted);
+}
+
+.gitButton img {
+  opacity: 100%;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title h1 {
+  font-family: "cairopixel";
+  font-size: 64px;
+  line-height: 0.8;
+}
+
+.title p {
+  font-size: 14px;
+  font-family: 'Dmono';
+  color: var(--text-muted);
+}

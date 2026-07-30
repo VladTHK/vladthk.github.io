@@ -1,0 +1,43 @@
+.stackBlock {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.stack {
+  font-family: 'cairopixel';
+  padding: 12px 24px;
+  background-color: var(--surface);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  height: 300px;
+  
+}
+
+.stack li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stack ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.stack h2 {
+  font-size: 46px;
+  border-bottom: var(--border);
+
+}
+
+.stack li h4 {
+  font-size: 26px;
+}
+
+.stack li span {
+  font-size: 10px;
+  color: var(--text-secondary);
+  font-family: 'Dmono';
+}

@@ -1,10 +1,10 @@
-import { Button } from '@/shared/Buttons/Button'
+import { Button } from '@/shared/Button/Button'
 import style from './style.module.css'
 
 import resumeIcon from '@/assets/icons/journal-page.svg'
 import gitHubIcon from '@/assets/icons/github.svg'
-import bubbleIcon from '@/assets/icons/bubble-income.svg'
 import laptopIcon from '@/assets/icons/laptop-dev-mode.svg'
+import bubbleIcon from '@/assets/icons/bubble-income.svg'
 import headImg from '@/assets/images/bhead_thk.gif'
 
 const AboutMe = () => {

@@ -1,0 +1,17 @@
+.container {
+  margin: 0 40px;
+  padding-top: 100px;
+
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+}
