@@ -10,10 +10,12 @@
   border-radius: var(--border-radius);
   cursor: pointer;
 
+  color: var(--text);
+
   transition: all 0.2s ease;
 
   &:hover {
-    background-color: var(--surface-hover);
+    background-color: var(--surface-hover)
   }
 
 }

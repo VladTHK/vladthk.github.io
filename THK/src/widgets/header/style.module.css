@@ -20,6 +20,7 @@
 .menu {
   display: flex;
   font-family: monospace;
+  font-weight: 600;
   align-items: center;
   font-size: 12px;
   color: var(--text-secondary);
