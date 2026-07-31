@@ -18,9 +18,9 @@ export const projects: Project[] = [
       'Сервис для сокращения ссылок.',
     description:
       'Бесплатный сервис для сокращения ссылок с аналитикой переходов, безопастностью и удобным интерфейсом. Поддерживются кастомные алиасы.',
-    image: 'src/assets/images/cutlinkView.png',
+    image: '@/assets/images/cutlinkView.png',
     screenshots: [
-      'src/assets/images/cutlinkView.png',
+      '@/assets/images/cutlinkView.png',
       '/projects/cutlink/2.png',
       '/projects/cutlink/3.png',
     ],
