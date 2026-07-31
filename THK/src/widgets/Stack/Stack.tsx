@@ -1,6 +1,6 @@
 import { Button } from "@/shared/Button/Button"
 
-import gitHubIcon from '@/assets/icons/github.svg'
+import WakaIcon from '@/assets/icons/medal1st.svg'
 import style from "./style.module.css"
 import StackBlock from "@/entities/Stack/StackBlock"
 
@@ -18,7 +18,7 @@ const Stack = () => {
           onClick={() => window.open('https://wakatime.com/@VladTHK', '_blank')}
           className={style.gitButton}
         >
-          <img src={gitHubIcon} alt="GitHub" />
+          <img src={WakaIcon} alt="WakaTime" />
           Check my WakaTime
         </Button>
 

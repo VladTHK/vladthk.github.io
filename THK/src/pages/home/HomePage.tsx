@@ -4,6 +4,7 @@ import Projects from '@/widgets/Projects/Projects'
 import Stack from '@/widgets/Stack/Stack'
 
 import style from "./style.module.css"
+import Contacts from '@/widgets/Contacts/Contacts'
 
 const HomePage = () => {
   return (
@@ -16,6 +17,7 @@ const HomePage = () => {
           <Hero/>
           <Projects/>
           <Stack/>
+          <Contacts/>
         </div>
       </div>
     </div>

@@ -1,0 +1,58 @@
+.question {
+  position: absolute;
+
+  z-index: 5;
+
+  font-family: "Cairopixel";
+
+  font-size: 48px;
+
+  color: var(--text);
+
+  pointer-events: none;
+
+  animation:
+    spawn .6s cubic-bezier(.2,.8,.2,1) forwards,
+    fadeOut .5s ease 2.5s forwards;
+}
+
+
+
+@keyframes spawn {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translate(-50%, -50%)
+      scale(.2);
+  }
+
+
+  60% {
+    opacity: 1;
+  }
+
+
+  to {
+    opacity: 1;
+
+    transform:
+      translate(-50%, -80px)
+      scale(1);
+  }
+
+}
+
+@keyframes fadeOut {
+
+  from {
+    opacity: 1;
+  }
+
+
+  to {
+    opacity: 0;
+  }
+
+}

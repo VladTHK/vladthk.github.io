@@ -1,19 +1,26 @@
 .hero {
   display: flex;
   flex-direction: column;
+
+  align-items: center;
+
   justify-content: center;
+
   gap: 90px;
+
   height: 80vh;
   padding-bottom: 10px;
 }
 
 .title {
-  font-family: "Cairopixel";
   display: flex;
+  font-family: "Cairopixel";
+  position: relative;
+  cursor: pointer;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-
+  user-select: none;
   line-height: 1;
 }
 
@@ -29,6 +36,12 @@
 }
 
 .aboutMe {
+  width: 100%;
   display: flex;
   justify-content: center;
 }
+
+.title:active h1 {
+  transform: scale(.95);
+}
+

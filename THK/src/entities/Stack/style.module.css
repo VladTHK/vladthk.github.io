@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
+  align-items: stretch;
 }
 
 .stack {
@@ -10,8 +11,6 @@
   background-color: var(--surface);
   border: var(--border);
   border-radius: var(--border-radius);
-  height: 300px;
-  
 }
 
 .stack li {

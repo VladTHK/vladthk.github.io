@@ -59,12 +59,12 @@ const ProjectsBlock = () => {
           {project.shortDescription}
         </p>
 
-        <br/>
 
         <p className={style.mainDescription}>
           {project.description}
         </p>
         <br/>
+        
 
 
         <div className={style.tags}>
@@ -89,7 +89,7 @@ const ProjectsBlock = () => {
 
           <Button
             onClick={() => window.open(project.demo)}
-            className={style.whiteButton}
+            className={style.accentButton}
           >
             <img src={devIcon} alt="icon" />
             Demo

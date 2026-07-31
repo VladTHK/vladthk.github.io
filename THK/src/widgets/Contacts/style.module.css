@@ -1,0 +1,15 @@
+.block {
+  padding: 25px;
+}
+
+.title h1 {
+  font-family: "cairopixel";
+  font-size: 64px;
+  line-height: .8;
+}
+
+.title p {
+  font-size: 14px;
+  color: var(--text-muted);
+  font-family: "Dmono";
+}
