@@ -5,6 +5,7 @@ import Stack from '@/widgets/Stack/Stack'
 
 import style from "./style.module.css"
 import Contacts from '@/widgets/Contacts/Contacts'
+import Footer from '@/widgets/Footer/Footer'
 
 const HomePage = () => {
   return (
@@ -19,6 +20,9 @@ const HomePage = () => {
           <Stack/>
           <Contacts/>
         </div>
+      </div>
+      <div className={style.footer}>
+        <Footer/>
       </div>
     </div>
   )

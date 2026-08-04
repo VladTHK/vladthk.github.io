@@ -1,0 +1,8 @@
+.footer {
+  display: flex;
+  justify-content: center;
+
+  font-family: monospace;
+  color: var(--text-muted);
+  padding-bottom: 5px;
+}
