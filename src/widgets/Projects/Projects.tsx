@@ -6,7 +6,7 @@ import ProjectsBlock from "@/entities/Project/ProjectsBlock"
 
 const Projects = () => {
   return (
-    <div className={style.block}>
+    <div id="projects" className={style.block}>
       <div className={style.top}>
         <div className={style.title}>
           <h1>Projects</h1>

@@ -36,7 +36,7 @@ const Hero = () => {
 
 
   return (
-    <div className={style.hero}>
+    <div id="home" className={style.hero}>
 
 
       <div className={style.title}>

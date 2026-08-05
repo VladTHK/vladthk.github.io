@@ -2,18 +2,29 @@
 import menuIcon from '@/assets/icons/menu.svg'
 import style from './style.module.css'
 
-const header = () => {
+
+interface HeaderProps {
+    onMenuClick: () => void
+}
+
+const Header = ({onMenuClick}: HeaderProps) => {
+ 
+
+
   return (
     <nav className={style.nav}>
       <div className={style.logo}>
         THK
       </div>
-      <div className={style.menu}>
+      <button
+        className={style.menu}
+        onClick={onMenuClick}
+      >
         <img src={menuIcon} alt="menu" />
         <p>menu (ctrl + k) </p>
-      </div>
+      </button>
     </nav>
   )
 }
 
-export default header
+export default Header

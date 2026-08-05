@@ -1,0 +1,109 @@
+.search {
+  font-size: 12px;
+  padding: 5px 15px;
+  display: flex;
+  height: 40px;
+  border-bottom: var(--border);
+  gap: 10px;
+}
+
+.search input {
+  font-size: 14px;
+  font-family: "Dmono";
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--text);
+}
+
+.search img {
+  width: 18px;
+  opacity: 50%;
+}
+
+.nav {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Dmono';
+  list-style-type: none;
+  gap: 5px;
+}
+
+.nav span {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.nav ul {
+
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+.nav li {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  height: 40px;
+  width: 100%;
+  border-radius: var(--border-radius);
+  opacity: 60%;
+  gap: 5px;
+  
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.nav li:hover {
+  background-color: var(--surface-hover);
+  opacity: 100%;
+}
+
+.nav li > img {
+  width: 20px;
+}
+
+.footer {
+  border-top: var(--border);
+  height: 40px;
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  padding-right: 10px;
+  align-items: center;
+}
+
+.footer span {
+  font-size: 15px;
+  user-select: none;
+}
+
+.footer ul {
+  display: flex;
+  gap: 5px;
+  font-family: "cairopixel";
+  color: var(--text-muted);
+  align-items: center;
+  font-size: 14px;
+  line-height: 1;
+  list-style-type: none;
+}
+
+
+
+.footer ul li span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  line-height: 1;
+  text-align: center;
+}
+
+.footer kbd {
+  font-family: monospace;
+  text-align: center;
+  font-size: 12px;
+}
