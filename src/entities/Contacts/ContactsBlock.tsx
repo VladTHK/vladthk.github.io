@@ -1,6 +1,6 @@
-import { contacts } from "./model/contacts"
+import { contacts } from './model/contacts'
 
-import style from "./style.module.css"
+import style from './style.module.css'
 
 const ContactsBlock = () => {
   return (
@@ -13,11 +13,7 @@ const ContactsBlock = () => {
           rel="noreferrer"
           className={`${style.card} ${style[contact.style]}`}
         >
-
-          <img
-            src={contact.icon}
-            alt={contact.title}
-          />
+          <img src={contact.icon} alt={contact.title} />
           <h2>{contact.title}</h2>
           <span>{contact.description}</span>
           <p>{contact.info}</p>

@@ -7,7 +7,6 @@ import contactsIcon from '@/assets/icons/bubble-income.svg'
 
 import type { MenuCategory } from './menuCategory'
 
-
 export interface MenuItem {
   id: string
   title: string
@@ -19,87 +18,84 @@ export interface MenuItem {
 
 export type MenuAction =
   | {
-      type: "link"
+      type: 'link'
       value: string
     }
   | {
-      type: "download"
+      type: 'download'
       value: string
     }
   | {
-      type: "scroll"
+      type: 'scroll'
       value: string
     }
-
-
 
 export const menu: MenuItem[] = [
   {
-    id: "home",
-    title: "Home",
-    description: "go to main page",
+    id: 'home',
+    title: 'Home',
+    description: 'go to main page',
     icon: homeIcon,
     action: {
-      type: "scroll",
-      value: "home"
+      type: 'scroll',
+      value: 'home',
     },
-    category: "nav"
+    category: 'nav',
   },
   {
-    id: "projects",
-    title: "Projects",
-    description: "My projects",
+    id: 'projects',
+    title: 'Projects',
+    description: 'My projects',
     icon: projectsIcon,
     action: {
-      type: "scroll",
-      value: "projects"
+      type: 'scroll',
+      value: 'projects',
     },
-    category: "nav"
+    category: 'nav',
   },
   {
-    id: "stack",
-    title: "Stack",
-    description: "Tech I use",
+    id: 'stack',
+    title: 'Stack',
+    description: 'Tech I use',
     icon: stackIcon,
     action: {
-      type: "scroll",
-      value: "stack"
+      type: 'scroll',
+      value: 'stack',
     },
-    category: "nav"
+    category: 'nav',
   },
   {
-    id: "contacts",
-    title: "Contacts",
+    id: 'contacts',
+    title: 'Contacts',
     description: "Let's build something together.",
     icon: contactsIcon,
     action: {
-      type: "scroll",
-      value: "contacts"
+      type: 'scroll',
+      value: 'contacts',
     },
-    category: "nav"
+    category: 'nav',
   },
   {
-    id: "github",
-    title: "GitHub",
-    description: "My github",
+    id: 'github',
+    title: 'GitHub',
+    description: 'My github',
     icon: gitIcon,
     action: {
-      type: "link",
-      value: "https://github.com"
+      type: 'link',
+      value: 'https://github.com',
     },
-    category: "link"
+    category: 'link',
   },
 
   {
-    id: "resume",
-    title: "Resume",
-    description: "Download resume",
+    id: 'resume',
+    title: 'Resume',
+    description: 'Download resume',
     icon: resumeIcon,
     action: {
-      type: "download",
-      value: "/resume.pdf"
+      type: 'download',
+      value: '/resume.pdf',
     },
-    category: "link"
+    category: 'link',
   },
-
 ]

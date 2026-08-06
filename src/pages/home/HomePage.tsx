@@ -6,41 +6,30 @@ import Contacts from '@/widgets/Contacts/Contacts'
 import Footer from '@/widgets/Footer/Footer'
 import MenuModal from '@/features/menu/ui/menuModal'
 
-
 import { useState, useEffect } from 'react'
 import { menu } from '@/features/menu/model/getMenu'
 
 import style from './style.module.css'
-
-
-
 
 const HomePage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleShortcut = (event: KeyboardEvent) => {
-      if (
-        event.ctrlKey &&
-        event.key.toLocaleLowerCase() === "k"
-      ) {
+      if (event.ctrlKey && event.key.toLocaleLowerCase() === 'k') {
         event.preventDefault()
 
-        setIsMenuOpen(prev => !prev)
+        setIsMenuOpen((prev) => !prev)
       }
-      if (event.key === "Escape" ){
+      if (event.key === 'Escape') {
         setIsMenuOpen(false)
       }
     }
 
-    window.addEventListener(
-      "keydown", handleShortcut
-    )
+    window.addEventListener('keydown', handleShortcut)
 
     return () => {
-      window.removeEventListener(
-        "keydown", handleShortcut
-      )
+      window.removeEventListener('keydown', handleShortcut)
     }
   })
 

@@ -10,6 +10,9 @@
 .logo {
   font-family: "Cairopixel";
   font-size: 30px;
+  color: white;
+  text-decoration: none;
+  scroll-behavior: smooth;
 
   transition: opacity 0.2s linear;
 

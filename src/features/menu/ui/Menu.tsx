@@ -16,7 +16,7 @@ interface MenuProps {
 
 const Menu = ({ items, onClose }: MenuProps) => {
   const [query, setQuery] = useState('')
-  
+
   const filteredItems = useMemo(() => {
     const search = query.trim().toLowerCase()
 
@@ -30,16 +30,8 @@ const Menu = ({ items, onClose }: MenuProps) => {
   }, [items, query])
 
   const groupedItems = useMemo(() => {
-
-    return Object.groupBy(
-      filteredItems,
-      item => item.category
-    )
-
+    return Object.groupBy(filteredItems, (item) => item.category)
   }, [filteredItems])
-
-
-
 
   return (
     <div className={style.wrapper}>

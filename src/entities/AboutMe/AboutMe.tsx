@@ -25,33 +25,25 @@ const AboutMe = () => {
             <img src={laptopIcon} alt="projects" />
             <span>Projects</span>
           </Button>
-          <Button
-            onClick={() => window.open('https://github.com/VladTHK', '_blank')}
-          >
+          <Button onClick={() => window.open('https://github.com/VladTHK', '_blank')}>
             <img src={gitHubIcon} alt="GitHub" />
             <span>GitHub</span>
           </Button>
         </div>
-        
       </div>
       <div className={style.description}>
         <h2>About me</h2>
         <br />
-        <p>
-          I'm Vlad — a full-stack developer focused on React, TypeScript and modern web technologies.
-        </p>
+        <p>I'm Vlad — a full-stack developer focused on React, TypeScript and modern web technologies.</p>
         <br />
         <p>
-          Currently studying web application development while continuously building personal projects and improving my engineering skills.
+          Currently studying web application development while continuously building personal projects and improving my
+          engineering skills.
         </p>
         <br />
-        <p>
-          I like creating clean interfaces, solving complex problems and learning through practice.
-        </p>
+        <p>I like creating clean interfaces, solving complex problems and learning through practice.</p>
         <br />
-        <p>
-          Open to interesting collaborations.
-        </p>
+        <p>Open to interesting collaborations.</p>
       </div>
     </div>
   )

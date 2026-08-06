@@ -1,6 +1,6 @@
-import style from "./style.module.css"
+import style from './style.module.css'
 
-import ContactsBlock from "@/entities/Contacts/ContactsBlock"
+import ContactsBlock from '@/entities/Contacts/ContactsBlock'
 
 const Contacts = () => {
   return (
@@ -9,10 +9,7 @@ const Contacts = () => {
         <h1>Contacts</h1>
 
         <p>Let's build something together.</p>
-        <p>
-          I'm open to freelance projects, collaborations
-          and interesting ideas.
-        </p>
+        <p>I'm open to freelance projects, collaborations and interesting ideas.</p>
       </div>
 
       <br />
