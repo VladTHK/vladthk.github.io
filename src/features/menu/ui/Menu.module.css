@@ -22,12 +22,17 @@
 }
 
 .nav {
+  max-height: 50vh;
   padding: 5px;
   display: flex;
   flex-direction: column;
   font-family: 'Dmono';
   list-style-type: none;
   gap: 5px;
+
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-color) transparent;
 }
 
 .nav span {

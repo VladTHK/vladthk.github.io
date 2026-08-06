@@ -16,7 +16,6 @@
 
 .modal {
   width: 45%;
-  min-height: fit-content;
   background:var(--surface);
   border: var(--border);
   border-radius: var(--border-radius);

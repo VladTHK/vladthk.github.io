@@ -4,7 +4,7 @@ import ContactsBlock from "@/entities/Contacts/ContactsBlock"
 
 const Contacts = () => {
   return (
-    <section className={style.block}>
+    <div id="contacts" className={style.block}>
       <div className={style.title}>
         <h1>Contacts</h1>
 
@@ -18,7 +18,7 @@ const Contacts = () => {
       <br />
 
       <ContactsBlock />
-    </section>
+    </div>
   )
 }
 

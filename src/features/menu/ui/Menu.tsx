@@ -1,15 +1,43 @@
-import type { MenuItem } from "../model/getMenu"
-import { executeAction } from "../lib/executeAction"
-import style from "./Menu.module.css"
-import searchIcon from "@/assets/icons/search.svg"
+import { useMemo, useState } from 'react'
 
+import type { MenuItem } from '../model/getMenu'
+import { categoryOrder, categoryTitles } from '../model/menuCategory'
+
+import { executeAction } from '../lib/executeAction'
+
+import style from './Menu.module.css'
+
+import searchIcon from '@/assets/icons/search.svg'
 
 interface MenuProps {
   items: MenuItem[]
   onClose: () => void
 }
 
-const Menu = ({items, onClose}: MenuProps) => {
+const Menu = ({ items, onClose }: MenuProps) => {
+  const [query, setQuery] = useState('')
+  
+  const filteredItems = useMemo(() => {
+    const search = query.trim().toLowerCase()
+
+    if (!search) {
+      return items
+    }
+
+    return items.filter(
+      (item) => item.title.toLowerCase().includes(search) || item.description.toLowerCase().includes(search)
+    )
+  }, [items, query])
+
+  const groupedItems = useMemo(() => {
+
+    return Object.groupBy(
+      filteredItems,
+      item => item.category
+    )
+
+  }, [filteredItems])
+
 
 
 
@@ -18,54 +46,75 @@ const Menu = ({items, onClose}: MenuProps) => {
       <div className={style.menu}>
         <div className={style.header}>
           <div className={style.search}>
-            <img src={searchIcon} alt="→" />
-            <input 
+            <img src={searchIcon} alt="" />
+
+            <input
               type="search"
-              placeholder="Where to? "
+              placeholder="Where to?"
               autoFocus
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
             />
           </div>
         </div>
 
         <div className={style.nav}>
-          <span>NAVIGATE</span>
-          <ul>
-            {
-              items.map((item) => (
-                <li
-                  key={item.id}
-                  onClick={() => 
-                    {
-                      executeAction(item.action)
-                      onClose()
-                    }
-                  }
-                >
-                  <img src={item.icon} alt="" />
-                  <p>  
-                    {item.title}
-                  </p>
-                  <span>
-                    - {item.description}.
-                  </span>
-                </li>
-              ))
+          {categoryOrder.map((category) => {
+            const categoryItems = groupedItems[category]
+
+            if (!categoryItems?.length) {
+              return null
             }
-          </ul>
+
+            return (
+              <div key={category} className={style.group}>
+                <span className={style.category}>{categoryTitles[category]}</span>
+
+                <ul>
+                  {categoryItems.map((item) => (
+                    <li
+                      key={item.id}
+                      onClick={() => {
+                        executeAction(item.action)
+                        onClose()
+                      }}
+                    >
+                      <img src={item.icon} alt="" />
+
+                      <p>{item.title}</p>
+
+                      <span>– {item.description}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )
+          })}
         </div>
 
         <div className={style.footer}>
-            <ul>
-              <li>
-                <span> <kbd>⇅</kbd> navigate</span>
-              </li>
-              <li>
-                <span> <kbd>◉</kbd> select</span>
-              </li>
-              <li>
-                <span> <kbd>esc</kbd> close</span>
-              </li>
-            </ul>
+          <ul>
+            <li>
+              <span>
+                <kbd>⇅</kbd>
+                navigate
+              </span>
+            </li>
+
+            <li>
+              <span>
+                <kbd>⏎</kbd>
+                select
+              </span>
+            </li>
+
+            <li>
+              <span>
+                <kbd>Esc</kbd>
+                close
+              </span>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

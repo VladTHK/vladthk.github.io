@@ -6,7 +6,7 @@ import StackBlock from "@/entities/Stack/StackBlock"
 
 const Stack = () => {
   return (
-    <div className={style.block}>
+    <div id="stack" className={style.block}>
       <div className={style.top}>
         <div className={style.title}>
           <h1>Tech I use</h1>
