@@ -30,7 +30,18 @@ const Menu = ({ items, onClose }: MenuProps) => {
   }, [items, query])
 
   const groupedItems = useMemo(() => {
-    return Object.groupBy(filteredItems, (item) => item.category)
+    return filteredItems.reduce<Record<string, MenuItem[]>>(
+      (groups, item) => {
+        if (!groups[item.category]) {
+          groups[item.category] = []
+        }
+
+        groups[item.category].push(item)
+
+        return groups
+      },
+      {}
+    )
   }, [filteredItems])
 
   return (
