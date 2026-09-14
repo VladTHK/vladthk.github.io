@@ -9,6 +9,8 @@ import MenuModal from '@/features/menu/ui/menuModal'
 import { useState, useEffect } from 'react'
 import { menu } from '@/features/menu/model/getMenu'
 
+import questionPng from '@/assets/illustrations/question.gif'
+
 import style from './style.module.css'
 
 const HomePage = () => {
@@ -49,6 +51,9 @@ const HomePage = () => {
       </div>
       <div className={style.footer}>
         <Footer />
+        <div className={style.questy}>
+          <img src={questionPng} alt="?" />
+        </div>
       </div>
     </div>
   )

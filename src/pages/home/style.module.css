@@ -16,3 +16,10 @@
   position: fixed;
   z-index: 100;
 }
+
+
+.questy {
+  position: absolute;
+  right: 10px;
+  transform: translateX(-50%);
+}
