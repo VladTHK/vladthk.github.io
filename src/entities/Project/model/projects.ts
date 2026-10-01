@@ -1,4 +1,4 @@
-import cutlinkImage from './img/cutlink.png'
+import cutlinkImage from './assets/cutlink.png'
 
 export interface Project {
   title: string
@@ -10,6 +10,7 @@ export interface Project {
   tags: string[]
   github: string
   demo: string
+  progress: string
 }
 
 export const projects: Project[] = [
@@ -22,6 +23,8 @@ export const projects: Project[] = [
     screenshots: [cutlinkImage],
     tags: ['React', 'JavaScript', 'React Query', 'Zustand'],
     github: 'https://github.com/',
-    demo: 'https://thk.c6t.ru/CutLink/'
-  }
+    demo: 'https://thk.c6t.ru/CutLink/',
+    progress: "Complete"
+  },
+
 ]

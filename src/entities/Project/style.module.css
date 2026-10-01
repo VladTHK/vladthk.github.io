@@ -1,150 +1,119 @@
-.wrapper {
+.projects {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-
-  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
 }
 
-
-
-.bigScreen {
-  padding: 6px 12px;
-  border-radius: 4px;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-
-  border: var(--border);
-  border-radius: var(--border-radius);
-  background-color: var(--surface);
-  overflow: hidden;
-}
-
-
-.bigScreen img {
-  border-radius: var(--border-radius);
-  box-shadow: 0 0 5px 2px black;
-  border: var(--border);
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-
-
-.slider {
+.project {
+  font-family: "Dmono";
   display: flex;
+  background: var(--surface);
+  padding: 10px;
+  border-radius: var(--border-radius);
+  border: var(--border);
+  gap: 10px;
+  min-width: min-content;
+  min-height: 220px;
+  border-bottom: 2px solid var(--border-color);
+  box-shadow: 0 2px 5px 2px #000000ef;
+}
+
+.placeholder {
   align-items: center;
-
-  gap: 12px;
-
-  margin-top: 16px;
+  justify-content: center;
+  border: 1px dashed var(--text-muted);
+  background: transparent;
+  color: var(--text-muted);
+  text-align: center;
+  backdrop-filter: blur(1.5px);
 }
 
-
-
-.slider ul {
-  display: flex;
-  gap: 8px;
-
-  list-style: none;
-}
-
-
-
-.slider li {
-  width: 100px;
-  height: 60px;
-  cursor: pointer;
-
-  border: var(--border);
-  border-radius: 8px;
-
-  overflow: hidden;
-}
-
-
-
-.slider img {
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-}
-
-.description {
+.projectInfo {
   display: flex;
   flex-direction: column;
-  gap: 6px ;
+  gap: 10px;
 }
 
+.project > img {
+  border-radius: var(--border-radius);
+  height: 100%;
+  width: 250px;
+  border: var(--border);
+}
 
-
-
-.description h1 {
-  font-family: "cairopixel";
-  font-size: 64px;
+.title {
   display: flex;
-  align-items: end;
-  line-height: 0.65;
-
-  gap: 8px
+  justify-content: space-between;
+  align-items: top;
 }
 
-
-
-.description h1 span {
-  background-color: var(--text);
-  padding:  2px 6px;
-  border-radius: 5px;
-  color: var(--surface);
-  font-size: 14px;
+.shortInfo h2 {
+  font-family: "cairopixel";
+  font-size: 32px;
 }
 
-.shortDescription {
-  font-size: 14px;
+.shortInfo p {
+  font-size: 10px;
   color: var(--text-secondary);
-  font-family: 'Dmono';
 }
 
-.mainDescription {
-  font-size: 14px;
-  color: var(--text);
-  font-family: 'Dmono';
+.progress {
+  font-size: 10px;
 }
 
-
+.description p {
+  font-size: 12px;
+}
 
 .tags {
   display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
+  gap: 5px;
 }
 
-
-
-.tags span {
-  font-family: 'Dmono';
-  font-size: 12px;
-  padding: 4px 8px;
-
-  background-color: var(--surface);
+.tag {
+  background: var(--surface-hover);
+  color: var(--text-secondary);
+  font-size: 10px;
+  padding: 5px 10px;
+  text-overflow: clip;
+  white-space: nowrap;
+  text-align: center;
+  border-radius: var(--border-radius);
   border: var(--border);
-  border-radius: 5px;
 }
 
 .buttons {
   display: flex;
+  height: 100%;
+  align-items: end;
   justify-content: center;
-  margin-top: auto;
-  gap: 12px;
+  font-size: 10px;
+  gap: 10px;
 }
 
-.accentButton {
+.secondaryButton {
   display: flex;
-  flex: 1 1 auto;
+  gap: 2px;
   justify-content: center;
   align-items: center;
-
-  height: 50px;
-
+  text-align: center;
+  width: 30%;
+  height: 40px;
 }
+
+.mainButton {
+  gap: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 40px;
+  width: 100%;
+  min-width: 200px;
+}
+
+.buttons img {
+  width: 20px;
+}
+

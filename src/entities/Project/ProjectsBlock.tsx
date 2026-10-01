@@ -1,104 +1,73 @@
-import { useState } from 'react'
-import {Button} from '@/shared/Button/Button'
+
 import { projects } from '@/entities/Project/model/projects'
 
 
-import gitIcon from '@/assets/icons/github.svg'
-import devIcon from '@/assets/icons/laptop-dev-mode.svg'
 import style from './style.module.css'
+import gitHubIcon from '@/assets/icons/github.svg'
+import demoIcon from '@/assets/icons/laptop-dev-mode.svg'
+import { Button } from '@/shared/Button/Button'
+
 
 const ProjectsBlock = () => {
-  const [activeProject, setActiveProject] = useState(0)
-
-  const project = projects[activeProject]
-
+  const projectSlots = 6
+  const projectItems = [
+    ...projects,
+    ...Array.from({ length: Math.max(0, projectSlots - projects.length) }, () => ({ placeholder: true as const })),
+  ]
 
   return (
     <div className={style.wrapper}>
-
-      <div className={style.preview}>
-
-        <div className={style.bigScreen}>
-          <img 
-            src={project.image}
-            alt={project.title}
-          />
-        </div>
-
-
-        <div className={style.slider}>
-
-          <ul>
-            {
-              projects.map((item, index) => (
-                <li
-                  key={item.title}
-                  onClick={() => setActiveProject(index)}
-                >
-                  <img src={item.image} alt={item.title}/>
-                </li>
-              ))
-            }
-          </ul>
-
-        </div>
-
+      <div className="">
+        <ul className={style.projects}>
+          {projectItems.map((project, index) => (
+            <li
+              className={`${style.project} ${'placeholder' in project ? style.placeholder : ''}`}
+              key={index}
+            >
+              {'placeholder' in project ? (
+                <span>Проект ещё не начат</span>
+              ) : (
+                <>
+                  <img src={project.image} alt="" />
+                  <div className={style.projectInfo}>
+                <div className={style.title}>
+                  <div className={style.shortInfo}>
+                    <h2>{project.title}</h2>
+                    <p>{project.shortDescription}</p>
+                  </div>
+                  <span className={style.progress}>{project.progress}</span>
+                </div>
+                <div className={style.description}>
+                  <p>{project.description}</p>
+                </div>
+                <ul className={style.tags}>
+                  {project.tags.map((tag, index) => (
+                    <li className={style.tag} key={index}>
+                      <span>{tag}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className={style.buttons}>
+                  <Button className={style.secondaryButton}
+                    onClick={() => window.open(project.github)}
+                  >
+                    <img src={gitHubIcon} alt="" />
+                    GitHub
+                  </Button>
+                  <Button className={style.mainButton}
+                    onClick={() => window.open(project.demo)}
+                  >
+                    <img src={demoIcon} alt="" />                    
+                    Demo
+                  </Button>
+                </div>
+                  </div>
+                </>
+              )}
+            </li>
+          ))}
+        </ul>
       </div>
-
-
-
-      <div className={style.description}>
-
-        <h1>
-          {project.title}
-          <span>{project.year}</span>
-        </h1>
-
-
-        <p className={style.shortDescription}>
-          {project.shortDescription}
-        </p>
-
-
-        <p className={style.mainDescription}>
-          {project.description}
-        </p>
-        <br/>
-        
-
-
-        <div className={style.tags}>
-          {
-            project.tags.map(tag => (
-              <span key={tag}>
-                {tag}
-              </span>
-            ))
-          }
-        </div>
-
-
-        <div className={style.buttons}>
-
-          <Button
-            onClick={() => window.open(project.github)}
-          >
-            <img src={gitIcon} alt="icon" />
-            GitHub
-          </Button>
-
-          <Button
-            onClick={() => window.open(project.demo)}
-            className={style.accentButton}
-          >
-            <img src={devIcon} alt="icon" />
-            Demo
-          </Button>
-
-        </div>
-
-      </div>
-
     </div>
   )
 }
