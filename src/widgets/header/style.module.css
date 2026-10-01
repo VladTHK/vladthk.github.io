@@ -49,3 +49,18 @@
   width: 18px;
   height: 18px;
 }
+
+@media (max-width: 600px) {
+  .nav {
+    padding: 8px 12px;
+  }
+
+  .logo {
+    font-size: 26px;
+  }
+
+  .menu {
+    min-height: 40px;
+    padding: 6px 9px;
+  }
+}

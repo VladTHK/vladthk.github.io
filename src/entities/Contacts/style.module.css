@@ -1,82 +1,64 @@
 .contacts {
-  display: flex;
-  gap: 16px;
-
-  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 20px;
 }
 
 .card {
-  position: relative;
-  flex: 1;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-
-  height: 340px;
-
-  padding: 24px;
-
-
-  background: var(--surface);
-
-  border: var(--border);
-  border-radius: var(--border-radius);
-
-  text-decoration: none;
-
-  transition: .2s;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-}
-
-.card img {
-  transform: translateX(10%);
-  filter:brightness();
-  opacity: 50%;
-  width: 80%;
-  height: 80%;
-}
-
-.card h2 {
-  margin-top: auto;
-
-  text-align: center;
-  color: var(--text) ;
-  font-family: "cairopixel";
-  font-size: 36px;
-}
-
-.card span {
   font-family: "Dmono";
-  color: var(--text-secondary);
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.8rem;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--surface);
+  border: var(--border);
+  border-bottom: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 10px;
+  opacity: 80%;
+  transition: opacity 0.2s ease, transform 0.3s ease;
+
+  &:hover {
+    opacity: 100%;
+    transform: translateY(-5px);
+  }
 }
 
-.card p {
-  font-size: 12px;
-  position: absolute;
-  bottom: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: 'Dmono';
+.card > img {
+  flex: 0 0 50px;
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.top {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.top p {
+  color: var(--text-secondary);
+  font-size: 0.7rem;
+}
+
+.info > span {
   color: var(--text-muted);
 }
 
-.github:hover, .resume:hover {
-  background: url(../../assets/video/card.gif);
-  background-size: cover;
-  z-index: 2;
-  box-shadow: 0 0 10px 5px black, inset 0 -40px 35px 2px black;
-  border: 1px solid #020202f8;
+.info {
+  width: 100%;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
-.mail:hover, .telegram:hover {
-  background: url(../../assets/video/cardBlue.gif);
-  background-size: cover;
-  z-index: 2;
-  box-shadow: 0 0 10px 5px black, inset 0 -40px 35px 2px black;
-  border: 1px solid #000005;
+@media (max-width: 520px) {
+  .contacts {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
 }
+

@@ -24,7 +24,6 @@
   list-style-type: none;
 }
 
-
 body {
   background-image: url("./assets/images/logothk.png");
   background-color: var(--bg);
@@ -34,12 +33,17 @@ body {
   scrollbar-width: thin;
   scrollbar-color: var(--border-color) transparent;
   overflow: auto;
+  min-width: 320px;
 }
-
-
 
 body::-webkit-scrollbar {
   width: 8px;
+}
+
+@media (max-width: 760px) {
+  img {
+    max-width: 100%;
+  }
 }
 
 body::-webkit-scrollbar-track {

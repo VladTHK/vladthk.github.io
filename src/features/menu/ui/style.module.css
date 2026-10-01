@@ -24,6 +24,13 @@
   animation: scaleIn .5s ease;
 }
 
+@media (max-width: 520px) {
+  .modal {
+    width: calc(100vw - 24px);
+    max-height: calc(100svh - 32px);
+  }
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

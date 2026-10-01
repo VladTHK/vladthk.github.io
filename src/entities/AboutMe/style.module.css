@@ -40,3 +40,42 @@
   font-family: "cairopixel";
   font-size: 44px;
 }
+
+@media (max-width: 760px) {
+  .aboutMe {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 16px;
+  }
+
+  .leftBlock {
+    width: min(100%, 420px);
+    flex-basis: auto;
+  }
+
+  .leftBlock > img {
+    max-height: 240px;
+  }
+
+  .description {
+    width: 100%;
+    padding: 16px;
+    font-size: 13px;
+  }
+
+  .description > h2 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 420px) {
+  .buttons {
+    gap: 8px;
+  }
+
+  .description > h2 {
+    font-size: 30px;
+  }
+}
+

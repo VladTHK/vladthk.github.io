@@ -7,7 +7,6 @@
   justify-content: center;
 
   gap: 90px;
-
   height: 80vh;
   padding-bottom: 10px;
 }
@@ -43,5 +42,41 @@
 
 .title:active h1 {
   transform: scale(.95);
+}
+
+@media (max-width: 900px) {
+  .hero {
+    gap: 56px;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero {
+    min-height: 0;
+    gap: 40px;
+    padding: 64px 0 24px;
+  }
+
+  .title > h1 {
+    font-size: 48px;
+  }
+
+  .title > h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero {
+    gap: 32px;
+  }
+
+  .title > h1 {
+    font-size: 38px;
+  }
+
+  .title > h2 {
+    font-size: 22px;
+  }
 }
 

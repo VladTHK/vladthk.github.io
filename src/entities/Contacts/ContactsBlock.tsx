@@ -14,9 +14,13 @@ const ContactsBlock = () => {
           className={`${style.card} ${style[contact.style]}`}
         >
           <img src={contact.icon} alt={contact.title} />
-          <h2>{contact.title}</h2>
-          <span>{contact.description}</span>
-          <p>{contact.info}</p>
+          <div className={style.info}>
+            <div className={style.top}>
+              <h2>{contact.title}</h2>
+              <p>{contact.info}</p>
+            </div>
+            <span>{contact.description}</span>
+          </div>
         </a>
       ))}
     </div>

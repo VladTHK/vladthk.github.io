@@ -1,7 +1,6 @@
 .container {
   margin: 0 40px;
   padding-top: 100px;
-
   scroll-behavior: smooth;
 }
 
@@ -17,9 +16,23 @@
   z-index: 100;
 }
 
-
 .questy {
   position: absolute;
   right: 10px;
   transform: translateX(-50%);
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 0;
+    padding: 76px 12px 0;
+  }
+
+  .wrapper {
+    gap: 48px;
+  }
+
+  .questy {
+    display: none;
+  }
 }

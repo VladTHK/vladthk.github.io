@@ -6,3 +6,11 @@
   color: var(--text-muted);
   padding-bottom: 5px;
 }
+
+@media (max-width: 520px) {
+  .footer {
+    padding: 16px 12px 8px;
+    text-align: center;
+    font-size: 12px;
+  }
+}
