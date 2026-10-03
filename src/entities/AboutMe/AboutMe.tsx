@@ -56,6 +56,7 @@ const AboutMe = () => {
         <div className={style.buttons}>
           {buttons.map((button) => (
             <Button
+              className={style.button}
               key={button.id}
               onClick={() => executeAction(button.action)}
             >

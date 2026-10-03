@@ -23,6 +23,12 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
+
+}
+
+.button {
+  border-bottom: 2px solid var(--border-color);
+  box-shadow: 0 2px 5px 2px #000000ef;
 }
 
 .description {
@@ -32,6 +38,8 @@
   padding: 12px;
   background-color: var(--surface);
   border: var(--border);
+  border-bottom: 2px solid var(--border-color);
+  box-shadow: 0 2px 5px 2px #000000ef;
   border-radius: var(--border-radius);
   width: 400px;
 }
