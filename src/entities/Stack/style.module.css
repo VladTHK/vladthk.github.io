@@ -48,6 +48,7 @@
 }
 
 .item {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,26 +56,102 @@
   height: 50px;
   box-sizing: border-box;
   border-radius: var(--border-radius);
-
 }
 
-.item img {
+.iconButton {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: var(--border-radius);
+  background: transparent;
+  cursor: pointer;
+}
+
+.iconButton img {
   width: 100%;
   border-radius: var(--border-radius);
   height: 100%;
   object-fit: contain;
-
   transition: transform 0.2s cubic-bezier(0.23, 1, 0.320, 1);
-  
-  &:hover {
-    transform: scale(1.05);
-  }
+}
 
+.iconButton:hover img {
+  transform: scale(1.05);
+}
+
+.iconButton:focus-visible {
+  outline: 2px solid var(--text-secondary);
+  outline-offset: 2px;
+}
+
+.selected {
+  border-color: var(--border-color);
+  background: var(--surface-hover);
 }
 
 .placeholder {
   border: 1px dashed var(--text-muted);
   background: transparent;
+}
+
+.info {
+  position: absolute;
+  z-index: 2;
+  top: calc(100% + 8px);
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 200px;
+  max-width: calc(100vw - 48px);
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: var(--border);
+  border-bottom: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background: var(--surface);
+  box-shadow: 0 4px 12px #000000a6;
+  text-align: left;
+  white-space: normal;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 4px);
+  transition:
+    opacity 0.16s ease,
+    transform 0.16s ease,
+    visibility 0.16s ease;
+}
+
+.infoVisible {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.infoTitle {
+  color: var(--text);
+  font-family: 'cairopixel';
+  font-size: 20px;
+}
+
+.infoCategory {
+  color: var(--text-muted);
+  font-family: 'Dmono';
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+.infoDescription {
+  color: var(--text-secondary);
+  font-family: 'Dmono';
+  font-size: 10px;
+  line-height: 1.5;
 }
 
 @media (max-width: 420px) {
@@ -88,10 +165,8 @@
     height: 44px;
   }
 
-  .item img {
+  .iconButton img {
     width: 100%;
     height: 100%;
   }
 }
-
-

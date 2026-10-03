@@ -14,6 +14,8 @@ const stackItems = stacks.flatMap((category) =>
 const StackBlock = () => {
   const listRef = useRef<HTMLUListElement>(null)
   const [columnCount, setColumnCount] = useState(0)
+  const [hoveredItem, setHoveredItem] = useState<number | null>(null)
+  const [selectedItem, setSelectedItem] = useState<number | null>(null)
 
   useEffect(() => {
     const list = listRef.current
@@ -54,21 +56,47 @@ const StackBlock = () => {
       </ul>
 
       <ul className={style.list} ref={listRef} aria-label="Technologies">
-        {stackItems.map((item) => (
-          <li
-            key={item.name}
-            className={style.item}
-            title={`${item.name} · ${item.categoryTitle}`}
-            aria-label={`${item.name}, ${item.categoryTitle}`}
-          >
-            {item.icon && (
-              <img
-                src={`https://skillicons.dev/icons?i=${item.icon}`}
-                alt={item.name}
-              />
-            )}
-          </li>
-        ))}
+        {stackItems.map((item, index) => {
+          const infoId = `stack-info-${index}`
+          const isSelected = selectedItem === index
+          const isInfoVisible = hoveredItem === index || isSelected
+
+          return (
+            <li key={item.name} className={style.item}>
+              <button
+                type="button"
+                className={`${style.iconButton} ${isSelected ? style.selected : ''}`}
+                aria-label={`${item.name}, ${item.categoryTitle}`}
+                aria-expanded={isInfoVisible}
+                aria-describedby={isInfoVisible ? infoId : undefined}
+                onMouseEnter={() => setHoveredItem(index)}
+                onMouseLeave={() => setHoveredItem(null)}
+                onFocus={() => setHoveredItem(index)}
+                onBlur={() => setHoveredItem(null)}
+                onClick={() => {
+                  setSelectedItem(isSelected ? null : index)
+                  if (isSelected) setHoveredItem(null)
+                }}
+              >
+                <img
+                  src={`https://skillicons.dev/icons?i=${item.icon}`}
+                  alt=""
+                />
+                <span
+                  id={infoId}
+                  className={`${style.info} ${isInfoVisible ? style.infoVisible : ''}`}
+                  aria-hidden={!isInfoVisible}
+                >
+                  <span className={style.infoTitle}>{item.name}</span>
+                  <span className={style.infoCategory}>{item.categoryTitle}</span>
+                  <span className={style.infoDescription}>
+                    {item.description}
+                  </span>
+                </span>
+              </button>
+            </li>
+          )
+        })}
         {Array.from({ length: placeholderCount }, (_, index) => (
           <li
             key={`placeholder-${index}`}
